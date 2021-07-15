@@ -1,0 +1,34 @@
+---
+title: "Infrastructure and toolkit for teaching financial computing"
+description: |
+  A case study article
+author:
+  - name: Barry Quinn 
+    url: https://quinference.com
+    affiliation: Queens Management School
+    affiliation_url: https://qub.ac.uk/mgt
+date: "`r Sys.Date()`"
+output: distill::distill_article
+bibliograph: biblio.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+Modern finance is fundamentally a computational discipline, with advancements in AI and machine learning embedded in the growth of financial technology.  The rise of big and alternative data also is created new opportunities in financial sector, including risk management, portfolio construction, investment banking and insurance.  Finance graduates, who are highly literate in computing, have a rare opportunity to balance the exponential growth of artificial intelligence(AI)/data science with ethics, bias, and privacy to create a *trustworthy* data-driven decision process [@Mahdavi2020].
+
+The need for computational in main stream statistics curricula is well understood with the 2014 American Statistical Association Guidelines
+
+The success of AI initiative in financial sector is dependent on bridging the skills gap illustrated in figure 1.
+
+# References
+
+
+
+
+
+
+
