@@ -1,0 +1,94 @@
+---
+title: "Infrastructure and toolkit for teaching financial data science"
+description: |
+ A case study on embedding computation as a central tennent of a finance curicullum.
+author:
+  - name: Barry Quinn 
+    url: https://quinference.com
+    affiliation: Queens Management School
+    affiliation_url: https://qub.ac.uk/mgt
+date: "`r Sys.Date()`"
+bibliography: biblio.bib
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+# Introduction
+
+Many parts of modern finance are fundamentally quantitative, with most financial researchers solving problems via empirical analysis. Advancements in AI and machine learning are a prime driver of the continuing growth of financial technology industry. The rise of big and alternative data also is created new opportunities in financial sector, including risk management, portfolio construction, investment banking and insurance.  Finance graduates, who are highly literate in computing, have a rare opportunity to balance the exponential growth of artificial intelligence(AI)/data science with ethics, bias, and privacy to create a *trustworthy* data-driven decision process [@Mahdavi2020].
+
+Finance and computation has gone hand in hand for centuries, with quantitative finance taking its roots from Bachelier’s *Theory of Speculation* (Bachelier 1900). On the buy-side: portfolio management was transformed with the quantitative research of Harry Markowitz in the early 1950’s shows how a complex mean-variance portfolio optimisation problem could be approximated by his Critical Line algorithm. Computerised algorithm trading championed by Ed Thorp, John Simons in the 1960’s shows arbitrage opportunities, unseen by traditional hedge fund managers, could be exploited to consistently *beat the market*.  On the sell-side, a game changing breakthrough in the 1970s was an options pricing model [@Black1973;@Merton1973], targeting explosive growth in the options markets [@Cesa2017]. Ironically, the BSM model main weaknesses, seen a growth in financial computing demands, as quantitative researchers use more realistic continuous-time pricing models which require computationally challenging partial differential equations [@Reisinger2018].  Figure 1 summarise some landmark moments in cloud computing and quantitative finance.
+
+
+```{r timeline}
+library(vistime)
+library(ggrepel)
+library(ggdark)
+library(stringr)
+
+c("Harry Markowitz <br> introduces <br> Critical Line Algorithm",
+  "NASDAQ launched <br> as first electronic <br> communications market",
+  "Fischer Black <br> proposes idea of fully <br> electronic exchanges <br> in a landmark paper",
+  "Black-Scholes-Merton <br> model for derivative pricing",
+  "Jim Simons <br> Founded Renaissance Technologies (RenTec), <br> introducing complex mathematical trading algorithms to markets",
+  "Michael Bloomberg <br> launches Innovative Market Systems <br> (which become Bloomberg LLP)",
+  "RenTec's Medallion fund <br> launched, <br> later to become <br> the most successful hedge fund in history",
+  "Heston & Dupire <br >introduce stochastic volatility models",
+  "Jump diffusion models introduced",
+  "SEC order US stock exchanges to be decimalised",
+  "Flash Crash (Markets drop 10% in a matter of minutes)",
+  "Basel III - introduce rules to periodical estimate counterpart risk of complex derivatives",
+  "Rebentrost et al. propose the use of quantum computing for derivative pricing",
+  "RenTex's Medallion Fund average 66% annual return over last 30 years",
+  "CME Smart Stream launched offering real-time cloud-based market data")->financeMs
+  
+
+c("Professor JohnMcCarthy (MIT) suggested computing will be sold as a utility",
+  "IBM virtualised operating systems",
+  "ARPANET launched by US Advanced Research Project Agency connect 4 university computer systems",
+  "100,000 computers on Internet",
+  "World Wide Web lanuched with 1 million computers on Net",
+  "Compaq introduce the concept of 'Cloud Computing'",
+  "Amazon (AWS) launch public Cloud",
+  "OpenNebula research project launched and the begining of the Big Data era",
+  "Amazon launch Elastic Computing Cloud (EC2)",
+  "Dropbox launch Cloud storage",
+  "Microsoft launch Azure cloud computing",
+  "DigitalOcean Droplets launched",
+  "Real-time streaming data on AWS",
+  "Machine learning sold as a service in the Cloud",
+  "Microsoft launches a massive data-ceter under the Altantic ocean",
+  "Google Tensor Processing Units avaliable on the cloud, introducing tensor-based mathematical to public")->cloudMs            
+content<-c(financeMs,cloudMs)            
+start   = paste0(c("1952","1971","1972","1973","1982","1983","1988","1993","2000","2001","2010","2013","2017","2018","2019","2010",
+                   "1961","1967","1969","1988","1991","1996","2002","2005","2006","2007","2012","2013","2015","2018","2019"),"-01-01")
+
+i<-length(financeMs)
+j=length(cloudMs)
+
+timeline_data<-data.frame(
+  event =str_wrap(content,width=5),
+  start=start,
+  end=start,
+  group=c(rep("Finance",i),rep("Cloud computing",j)),
+  fontcolor=c(rep("",i),rep("blue",j)))
+
+p<-hc_vistime(timeline_data,col.color = "fontcolor",title = "Figure 1: Evolution of computational finance and cloud computing")
+library(highcharter)
+p %>% hc_title(style = list(fontSize=20)) %>%
+      hc_yAxis(labels = list(style = list(fontSize=10, color="violet"))) %>%
+      hc_xAxis(labels = list(style = list(fontSize=15, color="violet"), rotation=30)) %>%
+      hc_chart(backgroundColor = "lightgrey")
+```
+
+
+# Computing environment
+To understand more about the computational foundations for students we borrow from the extant statistical education literature [@Kaplan2007; @Cetinkaya-Rundel2018].  Much like teaching statistics/data science quantitative finance has two interconnected goals. 
+1. Get students to do something interesting with data (and code) within the first ten minutes of the first class.
+2. Get students to think about computation as an integral part of the quantitative finance curriculum.
+An common solution is to use computing labs to facilitate computation exercises.  The downside is that instructors usually do not have administrative access and therefore struggle accomplish even the basic maintenance tasks.  Furthermore, this usually leads to common environment for all courses, rather than specialised set-ups for more enhanced student computational needs.  Finally, to achieve the second goal requires active engagement of computation for all contact time. 
+We use a web browser-based solutions, RStudio’s Workbench, to provide a frictionless student experience in both lectures and lab sessions. Workbench is professional data science server software, where facilitates interoperable computational insight integrate R and Python leveraging support for Jupyter, VSCode, and RStudio’s integrated development enviroment (IDE) [@RStudio2021].
+
+# 
