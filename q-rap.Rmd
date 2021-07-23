@@ -1,5 +1,5 @@
 ---
-title: "Infrastructure and toolkit for teaching financial data science"
+title: "Infrastructure and toolkit for teaching financial machine learning"
 description: |
  A case study on embedding computation as a central tennent of a finance curicullum.
 author:
@@ -107,6 +107,25 @@ p %>%
 
 <figurecaption> [@Varghese2019] provides the source of the cloud computing timeline, while the timeline for computational finance events is the authors own calculations. <figurecaption/>
 
+## What is financial machine learning?
+Machine learning has been adopted at pace in many real world applications, but has been slow to develop in areas of scientific research, especially financial research where tradition econometric techniques dominate.  It has been argued that this is due to a clashing culture, where the financial economics academia argue the ontological differences in econometrics and machine learning are intractable [@Coulombe2019]. This naive comparison highlights the epistemological challenges that are faced by computer age statistical inference of the rapid expansion of algorithmic development[@Efron2016]. Financial machine learning is a sub field in its infancy in the academic literature, which is attempting to reconcile the large differences between econometrics and machine learning by
+
+Machine learning can be defined as a branch of nonparametric statistics mixing, statistical learning, computer science and optimisation [@Molin2019] where algorithms are made up of three fundamental building blocks
+
+1. A loss function
+2. An optimisation criteria
+3. A optimisation routine    
+
+Changes in each of these building blocks produces a wide variation of learning algorithms characterising the degree of supervision. It is important to remember that these models are biased due to their optimisation of a restricted objective according to a specific algorithmic methodology and statistical rationale.  In contrast, Econometrics applies statistics, usually in the form of a regression analysis, to examine relationships. Model designs using a prior hypothesised model based on well journeyed theories, to produce objective (by minimising bias) statistical inference.  
+
+Broadly speaking financial machine learning attempts to resolve three broad conflicts between machine learning and financial economic research[@Lommers2021]:
+
+1. The importance of statistical inference
+2. Causality
+3. A prior hypotheses and model assumptions
+
+### Statistical inference
+Statistical inference is the bedrock of econometrics, while the main focus of machine learning is prediction.
 
 # Computing environment
 To understand more about the computational foundations for students we borrow from the extant statistical education literature [@Kaplan2007; @Cetinkaya-Rundel2018].  Much like teaching statistics/data science quantitative finance has two interconnected goals. 
@@ -118,3 +137,10 @@ We use a web browser-based solutions, RStudio’s Workbench, to provide a fricti
 ## Why R and Python?
 
 ## Why RStudio?
+
+## Solving the **but it worked on my machine?** problem
+
+# Reference
+
+Efron, Bradley, and Trevor Hastie. 2016. Computer Age Statistical Inference. Cambridge University Press.
+
