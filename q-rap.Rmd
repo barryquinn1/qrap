@@ -125,13 +125,15 @@ Broadly speaking financial machine learning attempts to resolve three broad conf
 3. A prior hypotheses and model assumptions
 
 ### Statistical inference
-Statistical inference broad discipline at the intersection of mathematics, empirical science and philoshopy. From its philosophical beginings through the publication of the Bayes rule in 1763 (used by early advocates to argue the existence of god) to its most recent advances in computation, a traditional bottleneck to statistical applications up to the early 1950s[@Efron2016].
+Statistical inference is a broad discipline at the intersection of mathematics, empirical science and philoshopy. Since its philosophical beginnings through the publication of the Bayes rule in 1763 (used by early advocates to argue the existence of god) computation has been a traditional bottleneck for applied statistical inference framework and has motivated small sample solutions with strong asymptotic principles. But since has been  to its most recent advances in computation, a traditional bottleneck to statistical applications up to the early 1950s[@Efron2016].
 
 Statistical inference is the bedrock of econometrics, while the main focus of machine learning is prediction. In traditional econometrics, models are build to learn statistical information and uncertainty about the parameters of the underlying data generating process, using an a prior probability model of the data generating process, with a proven theoretical track record under certain assumptions. In contrasts, machine learning models the focus is on prediction output, where the data generated process is generally undefined, with the goal of algorithmically optimisation models to fit the underlying data generating process as well as possible [@Lommers2021]. [@Efron2016] summaries this well in their definition of computer age statistical inference 
 
 <blockquote>
  Very broadly speaking, algorithms are what statistician do while inference says why they do them…The efflorescence of ambitious algorithms has forced an evolution (though not a revolution) in inference, the theories by which statisticians choose among competing methods. 
 </blockquote>
+
+*The boundary between econometrics and ML is subject to debate. Some methods fall squarely into one or the other camps, but many are used in both. For example, the bootstrap method can be used for statistical inference but also serves as the basis for ensemble methods, such as the Random Forest algorithm. Econometrics requires us to choose a model that incorporates our knowledge of the economic system, and ML requires us to choose a predictive algorithm by relying on its empirical capabilities. Justification for an inference model typically rests on whether we feel it adequately captures the essence of the system. The choice of pattern-learning algorithms often depends on measures of past performance in similar scenarios. Inference and ML are complementary in pointing us to economically meaningful conclusions.*
 
 
 # Computing environment
