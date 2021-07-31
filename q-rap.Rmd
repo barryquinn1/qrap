@@ -144,6 +144,12 @@ An common solution is to use computing labs to facilitate computation exercises.
 We use a web browser-based solutions, RStudio’s Workbench, to provide a frictionless student experience in both lectures and lab sessions. Workbench is professional data science server software, where facilitates interoperable computational insight integrate R and Python leveraging support for Jupyter, VSCode, and RStudio’s integrated development enviroment (IDE) [@RStudio2021].
 
 ## Why R and Python?
+R and Python are by far the leading languages for data analysis in finance industry.  This success is slowly infiltrating academia, although there are some notable holdouts where econometrics is taught using commercial graphical user interfaces(GUI).  Proponents of GUI-based econometrics teaching argue that teaching statistical concepts is less intimidating to beginners when using a point-and-click approach compared to command line approach. The latter also requires teaching programming in tandem with statistics.  
+
+Our experience has shown that such convenience is only possible by removing data analysis from the course content and providing students with tidy, rectangular data.  But for modern financial data science this approach is a disservice to students.  Furthermore, point-and-click approaches require a bespoke student user manual than can run to 40-plus pages provide a considerable learning curve for the novice student which isn’t generalisable to other analytics workflows.
+
+ 
+  The use of GUI-based econometrics is assumed to be more frictionless for teaching, but the GUI *copy and paste* workflow can actually increase frictions, is more error prone, and hard to debug than command line R and Python syntax[@].  
 
 ## Why RStudio?
 
