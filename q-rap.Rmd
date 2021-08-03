@@ -17,9 +17,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 # Introduction
 
-Many parts of modern finance are fundamentally quantitative, with financial researcher increasing solving problems using innovative financial technology solutions.  Furthermore, the rise of big and alternative data in combination with the exponential growth of AI and financial data science also is created new opportunities in financial sector, including risk management, portfolio construction, investment banking and insurance.  Given the finance professionals have an important fiduciary duty towards their clients, the rapid growth on AI in finance has highlighted some important risks around trust, overfitting, lack of interpretability, biased inputs and unethical use of data.  Now more than ever highly computationally literate finance graduates are needed to balance the exponential growth of artificial intelligence(AI)/data science with ethics, bias, and privacy to create *trustworthy* data-driven decisions [@Mahdavi2020].
+While finance is a social science, many parts of modern finance are fundamentally quantitative, with financial researcher increasing solving problems using innovative technological solutions.  Furthermore, the rise of big and alternative data in combination with the exponential growth of AI and financial data science is created new opportunities in financial sector, including risk management, portfolio construction, investment banking and insurance.  Given that finance professionals have an important fiduciary duty towards their clients, the rapid growth on AI in finance has highlighted some important risks around trust, overfitting, lack of interpretability, biased inputs and unethical use of data.  Now more than ever highly computationally literate finance graduates are needed to balance the exponential growth of artificial intelligence(AI)/data science with ethics, bias, and privacy to create *trustworthy* data-driven decisions [@Mahdavi2020].
 
-Finance and computation has gone hand in hand for centuries, with quantitative finance taking its roots from Bachelier’s *Theory of Speculation* (Bachelier 1900). On the buy-side: portfolio management was transformed with the quantitative research of Harry Markowitz in the early 1950’s shows how a complex mean-variance portfolio optimisation problem could be approximated by his Critical Line algorithm. Computerised algorithm trading championed by Ed Thorp, John Simons in the 1960’s shows arbitrage opportunities, unseen by traditional hedge fund managers, could be exploited to consistently *beat the market*.  On the sell-side, a game changing breakthrough in the 1970s was an options pricing model [@Black1973;@Merton1973], targeting explosive growth in the options markets [@Cesa2017]. Ironically, the BSM model main weaknesses, seen a growth in financial computing demands, as quantitative researchers use more realistic continuous-time pricing models which require computationally challenging partial differential equations [@Reisinger2018].  Figure 1 summarise some landmark moments in cloud computing and quantitative finance.
+Finance and computation has gone hand in hand for centuries, with quantitative finance taking its roots from Bachelier’s *Theory of Speculation* (Bachelier 1900). On the buy-side: portfolio management was transformed with the quantitative research of Harry Markowitz in the early 1950’s. Markowitz showed how a complex mean-variance portfolio optimisation problem could be approximated using algorithmic programming. Meanwhile, in the early 1960's [Ed Thorp](https://en.wikipedia.org/wiki/Edward_O._Thorp) and [John Simons](https://en.wikipedia.org/wiki/Jim_Simons_(mathematician)) using computer-aided statistical algorithms to show how arbitrage opportunities, unseen by traditional hedge fund managers, could be exploited to consistently *beat the market*.  On the sell-side, a game changing breakthrough in the 1970s was a model to price derivative products [@Black1973;@Merton1973] (BSM model), resulting in explosive growth in the options markets [@Cesa2017]. Subsequently weaknesses in the BSM model fuelled a growth in financial computing. Quantitative researchers, with the increased available of computational power, used more realistic continuous-time pricing models to estimate complex partial differential equations [@Reisinger2018]. This progression on computing and quantitative finance is nicely summarise in Figure 1.
 
 
 ```{r timeline}
@@ -75,7 +75,7 @@ timeline_data<-data.frame(
   group=c(rep("Finance",i),rep("Cloud <br> computing",j)),
   fontcolor=c(rep("",i),rep("blue",j)))
 
-p<-hc_vistime(timeline_data,col.color = "fontcolor",title = "Figure 1: Timeline of landscape computing events in finance and cloud computing")
+p<-hc_vistime(timeline_data,col.color = "fontcolor",title = "Figure 1: Timeline of landscape events in computational finance and cloud computing")
 library(highcharter)
 
 thm <- hc_theme(
@@ -108,15 +108,15 @@ p %>%
 <figurecaption> [@Varghese2019] provides the source of the cloud computing timeline, while the timeline for computational finance events is the authors own calculations. <figurecaption/>
 
 ## What is financial machine learning?
-Machine learning has been adopted at pace in many real world applications, but has been slow to develop in areas of scientific research, especially financial research where tradition econometric techniques dominate.  It has been argued that this is due to a clashing culture, where the financial economics academia argue the ontological differences in econometrics and machine learning are intractable [@Coulombe2019]. This naive comparison highlights the epistemological challenges that are faced by computer age statistical inference of the rapid expansion of algorithmic development[@Efron2016]. Financial machine learning is a sub field in its infancy in the academic literature, which is attempting to reconcile the large differences between econometrics and machine learning by
+Machine learning has been adopted at pace in many real world applications, but has been slow to develop in areas of scientific research, especially financial research where traditional econometric techniques dominate.  Leading econometricians argue this is due to a clashing culture, where some financial economist argues the ontological differences in econometrics and machine learning are intractable [@Athey2019]. This naive comparison highlights the epistemological challenges that are faced by computer age statistical inference of the rapid expansion of algorithmic development[@Efron2016]. Financial machine learning is a sub field in its infancy in the academic literature, which is attempting to reconcile the large differences between econometrics and machine learning.
 
-Machine learning can be defined as a branch of nonparametric statistics mixing, statistical learning, computer science and optimisation [@Molin2019] where algorithms are made up of three fundamental building blocks
+Machine learning can be defined as a branch of nonparametric statistics mixing, statistical learning, computer science and optimisation [@Molina2019] where algorithms are made up of three fundamental building blocks
 
 1. A loss function
 2. An optimisation criteria
 3. A optimisation routine    
 
-Changes in each of these building blocks produces a wide variation of learning algorithms characterising the degree of supervision. It is important to remember that these models are biased due to their optimisation of a restricted objective according to a specific algorithmic methodology and statistical rationale.  In contrast, Econometrics applies statistics, usually in the form of a regression analysis, to examine relationships. Model designs using a prior hypothesised model based on well journeyed theories, to produce objective (by minimising bias) statistical inference.  
+Changes in each of these building blocks produces a wide variation of learning algorithms characterising the degree of supervision. From an econometric perspective, these models are biased due to their optimisation of a restricted objective according to a specific algorithmic methodology and statistical rationale.  On the other hand, Econometrics applies statistics, usually in the form of a regression analysis, to examine relationships. Model designs using a prior hypothesised model based on well journeyed theories, to produce objective (i.e. minimising bias) statistical inference.  
 
 Broadly speaking financial machine learning attempts to resolve three broad conflicts between machine learning and financial economic research[@Lommers2021]:
 
@@ -151,11 +151,10 @@ Our experience has shown that such convenience is only possible by removing data
  
   The use of GUI-based econometrics is assumed to be more frictionless for teaching, but the GUI *copy and paste* workflow can actually increase frictions, is more error prone, and hard to debug than command line R and Python syntax[@].  
 
+### Teaching statistics by simulation
+A meaningful understand of econometrics requires more than reading and regurgitating textbook material.  The false discovery crisis in finance suggests that applying out-of-the-box econometric models to observational data also fails to provide a deep understanding of the qasm of abstraction of econometric models from financial data [@lopez2020].  
+
 ## Why RStudio?
 
-## Solving the **but it worked on my machine?** problem
-
-# Reference
-
-Efron, Bradley, and Trevor Hastie. 2016. Computer Age Statistical Inference. Cambridge University Press.
+* Solving the **but it worked on my machine?** problem
 
