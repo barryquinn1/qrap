@@ -147,24 +147,43 @@ while perserving the strengths of applied econometrics [@Athey2019].  Encouragin
 
 
 # Computing environment
-To understand more about the computational foundations for students we borrow from the extant statistical education literature [@Kaplan2007; @Cetinkaya-Rundel2018].  Much like teaching statistics/data science quantitative finance has two interconnected goals. 
+To understand more about the computational foundations for students we borrow from the extant statistical education literature [@Kaplan2007; @Cetinkaya-Rundel2018].  Much like teaching statistics/data science quantitative finance has two interconnected goals:
 1. Get students to do something interesting with data (and code) within the first ten minutes of the first class.
 2. Get students to think about computation as an integral part of the quantitative finance curriculum.
+
 An common solution is to use computing labs to facilitate computation exercises.  The downside is that instructors usually do not have administrative access and therefore struggle accomplish even the basic maintenance tasks.  Furthermore, this usually leads to common environment for all courses, rather than specialised set-ups for more enhanced student computational needs.  Finally, to achieve the second goal requires active engagement of computation for all contact time. 
-We use a web browser-based solutions, RStudio’s Workbench, to provide a frictionless student experience in both lectures and lab sessions. Workbench is professional data science server software, where facilitates interoperable computational insight integrate R and Python leveraging support for Jupyter, VSCode, and RStudio’s integrated development enviroment (IDE) [@RStudio2021].
 
+We use a web browser-based solutions, RStudio’s Teams, to provide a frictionless student experience in both lectures and lab sessions. The Workbench product (formerly RStudio server pro) is professional web server software, where facilitates interoperable computation integrating R and Python leveraging support for Jupyter, VSCode, and RStudio integrated development enviroments (IDEs) [@RStudio2021].
+
+# Some background
 ## Why R and Python?
-R and Python are by far the leading languages for data analysis in finance industry.  This success is slowly infiltrating academia, although there are some notable holdouts where econometrics is taught using commercial graphical user interfaces(GUI).  Proponents of GUI-based econometrics teaching argue that teaching statistical concepts is less intimidating to beginners when using a point-and-click approach compared to command line approach. The latter also requires teaching programming in tandem with statistics.  
+R and Python are the two leading languages used in industry for data analysis. Thus, to best prepare students to be competitive and perform on the job market, we made the explicit decision to teach both languages on the MSc quantitative finance.  These languages are also infiltrating academia, although there are some notable holdouts where econometrics is taught using commercial graphical user interfaces(GUI).  Proponents of GUI-based econometrics teaching argue that teaching statistical concepts is less intimidating to beginners when using a point-and-click approach compared to command line methods. In argument goes that with the latter teaching programming and statistics in tandem creates too much friction for students.
 
-Our experience has shown that such convenience is only possible by removing data analysis from the course content and providing students with tidy, rectangular data.  But for modern financial data science this approach is a disservice to students.  Furthermore, point-and-click approaches require a bespoke student user manual than can run to 40-plus pages provide a considerable learning curve for the novice student which isn’t generalisable to other analytics workflows.
-
- 
-The use of GUI-based econometrics is assumed to be more frictionless for teaching, but the GUI *copy and paste* workflow can actually increase frictions, is more error prone, and hard to debug than command line R and Python syntax[@].  
+In my experience such convenience is only possible by removing data analysis from the course content and providing students with tidy, rectangular data.  But for modern financial data analytics this approach is a disservice to students.  Furthermore, point-and-click approaches requires a bespoke student user manual that can run to [40-plus pages](https://github.com/barryquinn1/FMLmaterial/blob/27d8094fee39fa0284d3a0bfc10e38dcd3bebcac/Introducing%20Stata.pdf). We argue this is a considerable learning curve for the novice student which isn’t generalisable to other analytics workflows.  In general, using GUI *copy and paste* workflow can actually increase studen frictions, is more error prone, and harder to debug , and most importantly disconnects the logical link between computing from financial analytics[@Baumer2014].  
 
 ### Teaching statistics by simulation
 A meaningful understand of econometrics requires more than reading and regurgitating textbook material.  The false discovery crisis in finance suggests that applying out-of-the-box econometric models to observational data also fails to provide a deep understanding of the chasm between econometric model abstractions and the impermanence of the statistical features of financial data [@De_Prado2019].  
 
-## Why RStudio?
+## Why RStudio Teams?
+Figure 1 visualises the components that make up the bundle of softwares. 
+
+<img src=“imps/Team.png” align=“center”> 
+
+RStudio describe this product as follows: 
+
+>RStudio Team is a bundle of RStudio’s enterprise-grade professional software for scaling data science analytic work across your team, sharing data science results with your key stakeholders, and managing R and Python packages. RStudio Team includes RStudio Workbench, RStudio Package Manager, and RStudio Connect.
+RStudio Team offers convenience, simplicity, and savings to organizations using R, Python and RStudio at scale. - [@RStudioT2021]
+
+Teams is a enterprise-grade set-up offered free of charge for academic teaching.  For academic budgets, this is a significant saving, typically between $15,000 to $20,000.  The School’s budget can then focus on purchasing an agile computing infrastructure.  
+
+For teaching computation, the IDE is the most important tool in this bundle. The Workbench product comes with Jupyter (notebook and lab) and RStudio native IDE which provide a powerful interface which helps to flatten the learning curve in command line teaching. It has a series of panes to view data, files, and plots interactively. Additionally, since it is a full fledged IDE, it also features integrated help, syntax highlighting, and context-aware tab completion.
+
+Students access the RStudio IDE through a centralised RStudio server instance, which allows us to provide students with uniform computing environments. Additionally, RStudio’s direct integration with other critically important tools for teaching computing best practices and reproducible research, some
+of which we discuss in Sections 3.1 and 3.2, also influenced our decision for making it central in our toolkit.
+
+In 
+
+It should be noted that we do not want to completely dissuade students from downloading and installing R and RStudio locally, we just do not want it to be a prerequisite for getting started. We have found that teaching personal setup is best done progressively throughout a semester, usually via one-on-one interactions during office hours or after class. Our goal is that all students will be able to continue using R even if they no longer have access to departmental resources.
 
 * Solving the **but it worked on my machine?** problem
 
