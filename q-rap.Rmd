@@ -259,10 +259,15 @@ There are two main systems for producing computational notebooks in our infrastr
 
 While Jupyter notebooks are primarily associated with python scripting, they can also easily include R scripting if a R kernel engine is installed. They are a lightweight, low learning curve approach to teaching computing and are an excellent way to get non-technical students up and running in the first 10 minutes of a course. R Markdown are probably one of the most powerful tools in the RStudio IDE.  They can combine text with a vast array for language chunks include Bash, SQL, Stan, and many more. When teaching computing in finance we mainly use Python and R chunks, the former output in the RStudio environment using the `reticulate` package.
 
-Pedagogically, the main benefit of R Markdown is to embed the logical connection between computing and financial data analysis. This approach is sometimes referred to as *literate programming* [@Knuth1984]^[Donald Knuth is a pioneering in the computing world and create the vastly popular TeX typesetting markup language], which mades code, output and narrative inseperable.  [@Cetinkaya2019]
+Pedagogically, the main benefit of R Markdown is to embed the logical connection between computing and financial data analysis. This approach is sometimes referred to as *literate programming* [@Knuth1984]^[Donald Knuth is a pioneering in the computing world and create the vastly popular TeX typesetting markup language], which mades code, output and narrative inseperable.  Computational notebooks has three advantages over the copy-and-paste approach: 
+
+1. Combining code and output in one document makes it easier for student to local the source of the errors and encourage more experimentation.
+2. Strict uniformity of the reporting template makes it easier for the lecturer to grade
+3. Collaboration and group projects become much easier for students, especially if version control is used. Version control also provides a strict tagging system of individual contribution is assessed within a group work setting.
+4. Provide a baseline template document which as students learn can be more and more lightweight. This scaffolding approach is appeal for active learning, where he scaffolding is slowly remove as the course progress and the student move along the learning curve.
 
 ## Version control, git and GitHub
-
+Increasingly, in the world of computational finance, version control is being used to disseminate and promote innovation coding solutions to financial problems. It is perhaps an academic pipe-dream but in teaching computing in finance we should strive to have our students produce output which is reproducible in line with the statistics community [@Cetinkya2019] 
 
 
 
