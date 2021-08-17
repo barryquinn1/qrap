@@ -257,13 +257,18 @@ Computational notebooks are documents which combine code chunks with text to pro
 
 There are two main systems for producing computational notebooks in our infrastructure; Jupyter notebooks (and Jupyterlabs) and RMarkdown. Both are based on the Markdown, one of the most popular markup languages in computing. Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different. Markdown can be used for pretty much everything, from websites to technical documents.  It is portable, platform independent, future proof, and an important tool for the modern financial data scientists. 
 
-While Jupyter notebooks are primarliy associated with python scripting, they can also easily include R scripting if a R kernel engine is installed. They are a lightweight, low learning curve approach to teaching computing and are an excellent way to get non-technical students up and running in the first 10 minutes of a course. RMarkdown are probably one of the most powerful tools in the RStudio IDE.  They can combine text with a vast array for language chunks include Bash, SQL, Stan, and many more. When teaching computing in finance we mainly use Python and R chunks, the former output in the RStudio enviroment using the `reticulate` package.
+While Jupyter notebooks are primarily associated with python scripting, they can also easily include R scripting if a R kernel engine is installed. They are a lightweight, low learning curve approach to teaching computing and are an excellent way to get non-technical students up and running in the first 10 minutes of a course. R Markdown are probably one of the most powerful tools in the RStudio IDE.  They can combine text with a vast array for language chunks include Bash, SQL, Stan, and many more. When teaching computing in finance we mainly use Python and R chunks, the former output in the RStudio environment using the `reticulate` package.
+
+Pedagogically, the main benefit of R Markdown is to embed the logical connection between computing and financial data analysis. This approach is sometimes referred to as *literate programming* [@Knuth1984]^[Donald Knuth is a pioneering in the computing world and create the vastly popular TeX typesetting markup language], which mades code, output and narrative inseperable.  [@Cetinkaya2019]
 
 ## Version control, git and GitHub
 
-Table 1 summarises some some of the tools used and the future courses that will be exploiting the platform in academic year 2021/2022.
+
+
+
 
 ```{r usage table}
+library(flextable)
 
 ```
 
