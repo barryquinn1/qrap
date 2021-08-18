@@ -267,8 +267,7 @@ Pedagogically, the main benefit of R Markdown is to embed the logical connection
 4. Provide a baseline template document which as students learn can be more and more lightweight. This scaffolding approach is appeal for active learning, where he scaffolding is slowly remove as the course progress and the student move along the learning curve.
 
 ## Version control, git and GitHub
-Increasingly, in the world of computational finance, version control is being used to disseminate and promote innovation coding solutions to financial problems. It is perhaps an academic pipe-dream but in teaching computing in finance we should strive to have our students produce output which is reproducible in line with the statistics community [@Cetinkya2019] 
-
+Increasingly, in the world of computational finance, version control is being used to disseminate and promote innovation coding solutions to financial problems. In line with teaching statistics [@Cetinkya2019] computing teaching in finance we should strive to have students produce output which is reproducible. Git is a popular command line version control tool which integrates well with RStudio Teams products. GitHub is a web-based hosting repository platform which provides access control and many more collaborative features to manage team work on computing projects.
 
 
 
