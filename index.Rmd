@@ -1,7 +1,9 @@
 ---
 title: "Teaching finance in the digital age"
 description: |
- A case study on the toolkit and infrastructure for embedding computation as a central tenet of a finance curriculum.
+ A case study on the toolkit and infrastructure for embedding computation as a central tenet of a finance curriculum.  
+ 
+ *Special thanks to my colleague Alan Hanna who has provide some insightful feedback.*
 author:
   - name: Barry Quinn 
     url: https://quinference.com
