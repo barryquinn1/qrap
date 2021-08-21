@@ -11,15 +11,11 @@ author:
     affiliation_url: https://qub.ac.uk/mgt
 date: "`r Sys.Date()`"
 bibliography: biblio.bib
-output: 
-  distill::distill_article:
-    toc: true
-    toc_depth: 2
-    code_folding: true
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE,warning = FALSE,message = FALSE)
 ```
 # Introduction
 
@@ -99,11 +95,9 @@ Classical econometrics requires a model that incorporates our knowledge of the e
 
 For centuries, finance and computation have gone hand in hand, with quantitative finance taking its roots from Bachelier's *Theory of Speculation* [@Bachelier1900]. Computing as a utility can be traced back to Professor John McCarthy in the early 1960s.  As computing power has become more accessible and affordable, computation has become a central part of finance.  Figure 1 illustrates some of the critical moments in the development of computing in finance and the cloud.
 
-```{r timeline, code_folding=TRUE, layout="l-body-outset",fig.width=16,fig.height=3, fig.cap=" Computing landmarks finance and cloud computing.   The data for the cloud computing timeline is sourced from Varghese et al. (2019), while the finance timeline is the authors' calculations"}
+```{r timeline,fig.cap=" Computing landmarks finance and cloud computing.   The data for the cloud computing timeline is sourced from Varghese et al. (2019), while the finance timeline is the authors' calculations"}
 library(vistime)
-library(ggrepel)
-library(ggdark)
-library(stringr)
+library(highcharter)
 
 c("Harry Markowitz <br> introduces <br> Critical Line Algorithm",
   "NASDAQ launched <br> as first electronic <br> communications market",
@@ -162,9 +156,7 @@ timeline_data<-data.frame(
   fontcolor=c(rep("red",i),rep("blue",j)))
 
 p<-hc_vistime(timeline_data,col.color = "fontcolor")
-p1<-gg_vistime(timeline_data,col.color = "fontcolor") + geom_jitter()
-p1
-library(highcharter)
+# p<-gg_vistime(timeline_data,col.color = "fontcolor") + geom_jitter()
 
 thm <- hc_theme(
   colors = c("red", "green", "blue"),
