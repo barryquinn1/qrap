@@ -11,11 +11,15 @@ author:
     affiliation_url: https://qub.ac.uk/mgt
 date: "`r Sys.Date()`"
 bibliography: biblio.bib
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+    code_folding: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE,code_folding=FALSE)
 ```
 # Introduction
 
@@ -95,7 +99,7 @@ Classical econometrics requires a model that incorporates our knowledge of the e
 
 For centuries, finance and computation have gone hand in hand, with quantitative finance taking its roots from Bachelier's *Theory of Speculation* [@Bachelier1900]. Computing as a utility can be traced back to Professor John McCarthy in the early 1960s.  As computing power has become more accessible and affordable, computation has become a central part of finance.  Figure 1 illustrates some of the critical moments in the development of computing in finance and the cloud.
 
-```{r timeline, fig.cap=" Computing landmarks finance and cloud computing.   The data for the cloud computing timeline is sourced from Varghese et al. (2019), while the finance timeline is the authors' calculations"}
+```{r timeline, code_folding=TRUE, layout="l-body=outset",fig.width=16,fig.height=4, fig.cap=" Computing landmarks finance and cloud computing.   The data for the cloud computing timeline is sourced from Varghese et al. (2019), while the finance timeline is the authors' calculations"}
 library(vistime)
 library(ggrepel)
 library(ggdark)
@@ -283,7 +287,9 @@ There are two main formats for producing computational notebooks; Jupyter notebo
 
 Out of the box, the Jupyter ecosystem supports python scripting using the IPython kernel but can support up to 100 different languages (called 'kernels') by installing additional kernels^[https://jupyter4edu.github.io/jupyter-edu-book/jupyter.html]. Jupyter notebooks are a lightweight, low learning curve approach to teaching computing and are an excellent way to get non-technical students up and running in the first 10 minutes of a course. R Markdown is probably one of the most powerful tools in the RStudio IDE. R Markdown files are plain text documents that combine text, code and YAML metadata into an authoring framework for financial analytics. In the RStudio IDE, you can open an. Rmd file and working interactively, or render the file to build a static report or a dynamic web app using the `Shiny` packages.  For instance, when you render an R Markdown document, it will combine the text with output from your code.  The rendering process produces static formats such as HTML, pdf and word, but it can also produce interactive dashboards, web apps, slide shows, websites and more technical documentation (See video below). We mainly use Python and R code chunks in our teaching, the former output in the RStudio environment using the `reticulate` package.
 
-<iframe src="https://player.vimeo.com/video/178485416?h=8a57bf9b88&color=428bca" width="640" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<aside>
+<iframe src="https://player.vimeo.com/video/178485416?h=8a57bf9b88&color=428bca" width="100" height="80" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</aside>
 
 Pedagogically, the main benefit of R Markdown and Jupyter notebooks is to embed the logical connection between computing and financial data analysis. This approach is sometimes referred to as *literate programming* [@Knuth1984]^[Donald Knuth is pioneering in the computing world and create the vastly popular TeX typesetting markup language], which made code, output and narrative inseparable.  Computational notebooks have four advantages over the copy-and-paste approach: 
 
