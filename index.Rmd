@@ -19,7 +19,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,code_folding=FALSE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 # Introduction
 
@@ -44,7 +44,7 @@ Machine learning is a  branch of nonparametric statistics mixing statistical lea
 2. An optimisation criteria
 3. An optimisation routine    
 
-Changes in each of these building blocks produce a wide variety of learning algorithms characterising the freedom they have to learn patterns in the data^[Boardly speaking, machine learning algorithms are categorised into unsupervised learning and supervised learning.  A classic example of the form is clustering, and the latter is a regression tree. Reinforcement learning, a popular technique for financial data, is in between these two extremes of unsupervised learning (no feedback at all) and supervised learning that can be viewed as feedback by providing the correct labels.  Instead, partial feedback (in the form of *rewards*) encourages the desired behaviour without instructing the algorithm precisely what to do as supervised learning [@Dixon2021].]. Econometrically, these models possess bias due to their optimisation of a restricted objective according to a specific algorithmic methodology and statistical rationale.
+Changes in each of these building blocks produce a wide variety of learning algorithms characterising the freedom they have to learn patterns in the data^[Boardly speaking, machine learning algorithms are categorised into unsupervised learning and supervised learning.  A classic example of the form is clustering, and the latter is a regression tree. Reinforcement learning, a popular technique for financial data, is in between these two extremes of unsupervised learning (no feedback at all) and supervised learning that can be viewed as feedback by providing the correct labels.  Instead, partial feedback (in the form of *rewards*) encourages the desired behaviour without instructing the algorithm precisely what to do as supervised learning [@Dixon2020].]. Econometrically, these models possess bias due to their optimisation of a restricted objective according to a specific algorithmic methodology and statistical rationale.
 On the other hand, econometrics applies statistics to a data sample, usually in the form of regression analysis, to examine relationships. The model design uses well-journeyed economic theory to develop an *unobservable* hypothesised model. The asymptotic theory is then relied upon to produce objective statistical inference, which minimises bias, possibly at the expense of increased sampling variation.
 
 Financial machine learning attempts to resolve three broad conflicts between machine learning and econometrics[@Lommers2021]:
@@ -99,7 +99,7 @@ Classical econometrics requires a model that incorporates our knowledge of the e
 
 For centuries, finance and computation have gone hand in hand, with quantitative finance taking its roots from Bachelier's *Theory of Speculation* [@Bachelier1900]. Computing as a utility can be traced back to Professor John McCarthy in the early 1960s.  As computing power has become more accessible and affordable, computation has become a central part of finance.  Figure 1 illustrates some of the critical moments in the development of computing in finance and the cloud.
 
-```{r timeline, code_folding=TRUE, layout="l-body-outset",fig.width=16,fig.height=4, fig.cap=" Computing landmarks finance and cloud computing.   The data for the cloud computing timeline is sourced from Varghese et al. (2019), while the finance timeline is the authors' calculations"}
+```{r timeline, code_folding=TRUE, layout="l-body-outset",fig.width=16,fig.height=3, fig.cap=" Computing landmarks finance and cloud computing.   The data for the cloud computing timeline is sourced from Varghese et al. (2019), while the finance timeline is the authors' calculations"}
 library(vistime)
 library(ggrepel)
 library(ggdark)
@@ -154,7 +154,8 @@ i<-length(financeMs)
 j=length(cloudMs)
 
 timeline_data<-data.frame(
-  event =str_wrap(content,width=5),
+  # event = str_wrap(content,width=5),
+    event = content,
   start=start,
   end=start,
   group=c(rep("Finance",i),rep("Cloud <br> computing",j)),
