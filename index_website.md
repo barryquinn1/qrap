@@ -46,7 +46,7 @@ opportunities for computationally literate finance graduates in the UK.
 This paper provides an overview of the opportunities and challenges for
 the Finance education curricula in the fast-paced world of financial
 technology innovations. We specifically focus on econometrics and the
-emerging field of economic machine learning and embed computation as a
+emerging field of financial machine learning and embed computation as a
 central tenant to allow for a frictionless approach to teaching. We
 provide an overview of how this has been achieved in the Management
 School of Queens University Belfast using an enterprise-scale cloud

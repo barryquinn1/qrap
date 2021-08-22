@@ -32,7 +32,7 @@ While narrow AI, which uses rule-based algorithms, has dominated the fast-paced 
 The UK is leading the way in Financial Technology (FinTech) innovation and are forging on with a large scale plan post-Brexit. The recent Kalifa Review of UK Fintech
 sets out an ambitious 5 point plan to foster and scale UK based Fintech firms.  A central part of this plan is to *upskill*, and *reskill* adults by developing training and courses from high-quality universities. So now more than ever, there are exciting opportunities for computationally literate finance graduates in the UK.
 
-This paper provides an overview of the opportunities and challenges for the Finance education curricula in the fast-paced world of financial technology innovations.  We specifically focus on econometrics and the emerging field of economic machine learning and embed computation as a central tenant to allow for a frictionless approach to teaching.  We provide an overview of how this has been achieved in the Management School of Queens University Belfast using an enterprise-scale cloud computing infrastructure and a suite of enterprise-level web software.
+This paper provides an overview of the opportunities and challenges for the Finance education curricula in the fast-paced world of financial technology innovations.  We specifically focus on econometrics and the emerging field of financial machine learning and embed computation as a central tenant to allow for a frictionless approach to teaching.  We provide an overview of how this has been achieved in the Management School of Queens University Belfast using an enterprise-scale cloud computing infrastructure and a suite of enterprise-level web software.
 
 # Background
 ## What is financial machine learning?
