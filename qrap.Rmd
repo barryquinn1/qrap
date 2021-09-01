@@ -83,13 +83,13 @@ Thus the challenge for modern computationally literate finance graduate is to un
 
 #### Modelling paradigm
 
-Unlike many other disciplines in mathematics, statistics has no unifying paradigm.  Traditional econometrics has long favour the frequentist paradigm, but with the increase in computer power and improvements in probabilistic programming bayesian inference is becoming more common place. A naive assumption is that these paradigms are competing and in traditional econometrics, the frequentist approach is preferred due to its ability to be more objective.  But objectivity is explicitly linked to the analyst’s confidence in the prior belief that asymptotic properties of frequentist methods hold true. But bayesian inference does require the additional assumption of prior probabilities, which is a step too far for tradition econometricians.
+Statistics is the science of learning from experience [@Efron2019], but unlike many other disciplines in mathematics, there is no unifying statistical theory.  Traditional econometrics has long favoured the frequentist paradigm, but with the increase in computer power, improvements in Markov Chain Monte Carlo (MCMC) methods, and advances in probabilistic programming bayesian inference more common place in finance. Yet teaching statistical inference in finance is still dominated by frequentism, with bayesian inference a footnote at best.  The perception among some educators is that bayesian statistics are too complex a topic for introductory course, but the human brian is a inference engine which intuitively learns concepts are more intuitive and more easy to teach in an introductory course.  A naive assumption is that these paradigms are competing and in traditional econometrics, the frequentist approach is preferred due to its ability to be more objective.  But objectivity is explicitly linked to the analyst’s confidence in the prior belief that asymptotic properties of frequentist methods hold true. But bayesian inference does require the additional assumption of prior probabilities, which is a step too far for tradition econometricians.
 
 bit on Efron
 
 bit on bayesian econometrics in finance Jacquier and Polson
 
-Bayesian econometrics in finance is becoming an increasing important alternative to the aforementioned 
+Bayesian econometrics in finance is becoming an increasing important tool for 
 So far we have consider only the
 At this point, it is important to note that *traditional* approach we discuss in the previous section is based on the frequentist paradigm, but an important alternative that has gain prominence in line with increasing compute power is bayesian econometrics.  
 
