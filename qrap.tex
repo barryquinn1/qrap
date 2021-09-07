@@ -52,7 +52,9 @@ in a cloud computing suite with enterprise-level server software.
    \and
     Financial machine learning
    \and
-    Econometrics
+    Financial econometrics
+   \and
+    Statistical inference
    \and
     Cloud computing
    \and
@@ -122,26 +124,25 @@ computing infrastructure and a suite of enterprise-level web software.
 \hypertarget{background}{%
 \section{Background}\label{background}}
 
-\hypertarget{what-is-financial-machine-learning}{%
-\subsection{What is financial machine
-learning?}\label{what-is-financial-machine-learning}}
+\hypertarget{what-is-financial-machine-learning-hereafter-fml}{%
+\subsection{What is financial machine learning (hereafter
+FML)?}\label{what-is-financial-machine-learning-hereafter-fml}}
 
-Machine learning has been adopted at a pace in many real-world
-applications but has been slow to develop in areas of scientific
-research, especially economic analysis, where traditional econometric
-techniques dominate. Leading econometricians argue this is due to a
-clashing culture (Athey and Imbens 2019), where some financial
+Machine learning (hereafter ML) has been adopted at a pace in many
+real-world applications but has been slow to develop in areas of
+scientific research, especially economic analysis, where traditional
+econometric techniques dominate. Leading econometricians argue this is
+due to a clashing culture (Athey and Imbens 2019), where some financial
 economists view the ontological differences in econometrics and machine
 learning as intractable. This naive comparison highlights the
 epistemological challenges computer age statistical inference faces in a
-world of rapid algorithmic development (Efron and Hastie 2016).
-Financial machine learning is a subfield of AI in its infancy,
-attempting to reconcile the differences between econometrics and machine
-learning.
+world of rapid algorithmic development (Efron and Hastie 2016). FML is a
+subfield of AI in its infancy, attempting to reconcile the differences
+between econometrics and ML.
 
-Machine learning is a branch of nonparametric statistics mixing
-statistical learning, computer science and optimisation (Molina and
-Garip 2019), where algorithms have three fundamental building blocks:
+ML is a branch of nonparametric statistics mixing statistical learning,
+computer science and optimisation (Molina and Garip 2019), where
+algorithms have three fundamental building blocks:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -156,19 +157,19 @@ Garip 2019), where algorithms have three fundamental building blocks:
 
 Changes in each of these building blocks produce a wide variety of
 learning algorithms characterising the freedom they have to learn
-patterns in the data\footnote{Broadly speaking, machine learning
-  algorithms are categorised into unsupervised learning and supervised
-  learning. A classic example of the former is clustering, and the
-  latter is a regression tree. A learning algorithm with no feedback is
-  unsupervised in that the analyst provides no information to guide the
-  learning process. In contrast supervised learning involves feedback in
-  the form of training data which is correctly labelled. Between these
-  two extremes there are other types of machine learning which are
+patterns in the data\footnote{Broadly speaking, ML algorithms are
+  categorised into unsupervised learning and supervised learning. A
+  classic example of the former is clustering, and the latter is a
+  regression tree. A learning algorithm with no feedback is unsupervised
+  in that the analyst provides no information to guide the learning
+  process. In contrast supervised learning involves feedback in the form
+  of training data which is correctly labelled. Between these two
+  extremes there are other types of machine learning which are
   particularly popular in finance. Reinforcement learning uses partial
   feedback, in the form of \emph{rewards}, to encourages the desired
   behaviour without instructing the algorithm precisely (Dixon and
-  Polson 2020).}. Econometrically, these models possess bias due to
-their optimisation of a restricted objective according to a specific
+  Polson 2020).}. Econometrically, ML models are biased due to their
+optimisation of a restricted objective according to a specific
 algorithmic methodology and statistical rationale. On the other hand,
 econometrics applies statistics to a data sample, usually in the form of
 regression analysis, to examine relationships. The model design uses
@@ -177,9 +178,8 @@ hypothesised model. The asymptotic theory is then relied upon to produce
 objective statistical inference, which minimises bias, possibly at the
 expense of increased sampling variation.
 
-Financial machine learning attempts to resolve three broad conflicts
-between machine learning and econometrics(Lommers, Harzli, and Kim
-2021):
+FML attempts to reconcile three broad conflicts between ML and
+econometrics(Lommers, Harzli, and Kim 2021):
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -202,8 +202,8 @@ beginnings through the publication of the Bayes rule in 1763\footnote{Which
 computation has been a traditional bottleneck for applied statistical
 inference frameworks, motivating small sample solutions with solid
 asymptotic principles (Efron and Hastie 2016). Traditional econometrics
-retained much of this framework arguable because of the sparsity of data
-to proxy the realisation of theory. Up until the early 1950s, the
+retained much of this framework arguable because of the sparsity of
+observed data realisation of theory. Up until the early 1950s, the
 computation bottle still dominated small sample solutions in applied
 statistics. But as power and accessibility of computing have increased,
 and statistical theory has developed, statistical inference using
@@ -213,15 +213,14 @@ statisticians\footnote{One notable example is the \emph{bootstrap} a
   applied statistics.}
 
 Statistical inference is the bedrock of econometrics, while the main
-focus of machine learning is prediction. In traditional econometrics,
-models learn statistical information and uncertainty about the
-parameters of the \emph{unobservable} data generating process. Their
-power emanates from an \emph{a priori} probability model under strict
-assumptions with a proven track record. Armed with this theoretical
-confidence and using the dominant frequentist approach, econometricians
-can objectively infer uncertainty and variation characteristics about
-\textbf{how well the data sampled maps to the theoretical data
-generating process}.
+focus of ML is prediction. In traditional econometrics, models learn
+statistical information and uncertainty about the parameters of the
+\emph{unobservable} data generating process. Their power emanates from
+an \emph{a priori} probability model under strict assumptions with a
+proven track record. Armed with this theoretical confidence and using
+the dominant frequentist approach, econometricians can objectively infer
+uncertainty and variation characteristics about \textbf{how well the
+data sampled maps to the theoretical data generating process}.
 
 Econometricians coax validate statistical inference using amenable
 distributional assumptions and model specifications. The three most
@@ -274,6 +273,49 @@ in a penalised regression model to yield tangible advantages for
 balancing support recovery, parameter estimation, and prediction tasks
 (Blume et al. 2019; Zuo, Stewart, and Blume 2021).
 
+\hypertarget{modelling-paradigm}{%
+\subsubsection{Modelling paradigm}\label{modelling-paradigm}}
+
+Statistics is the science of learning from experience (Efron and Hastie
+2016), to reduce the uncertainty and variation around problem
+investigated. No one theory can cover such a nebulous target as
+\emph{learning from experience}, thus there is no unifying statistical
+theory. Broadly, speaking their are two modelling paradigms; Frequentism
+and Bayesianism. Much of the inference discussion in the previous
+section is based on the frequentist approach.
+
+Traditional econometrics has long favoured the frequentist paradigm, but
+with the increases in computer power, improvements in Markov Chain Monte
+Carlo (MCMC) methods, and advances in probabilistic programming bayesian
+inference in increasing in popularity in some areas of finance. Yet
+teaching statistical inference in finance is still dominated by
+frequentism, with bayesian inference a footnote at best. The perception
+among some educators is that bayesian statistics are too complex a topic
+for introductory courses. In our experience, bayesian inference, with
+its principle of updating beliefs from new evidence, as a concept can be
+intuitively appeal given it similarity to the human brain works as an
+inference engine which intuitively learns and adapts from experience.
+
+are more intuitive and more easy to teach in an introductory course. A
+naive assumption is that these paradigms are competing and in
+traditional econometrics, the frequentist approach is preferred due to
+its ability to be more objective. But objectivity is explicitly linked
+to the analyst's confidence in the prior belief that asymptotic
+properties of frequentist methods hold true. But bayesian inference does
+require the additional assumption of prior probabilities, which is a
+step too far for tradition econometricians.
+
+bit on Efron
+
+bit on bayesian econometrics in finance Jacquier and Polson
+
+Bayesian econometrics in finance is becoming an increasing important
+tool for So far we have consider only the At this point, it is important
+to note that \emph{traditional} approach we discuss in the previous
+section is based on the frequentist paradigm, but an important
+alternative that has gain prominence in line with increasing compute
+power is bayesian econometrics.
+
 \hypertarget{causality}{%
 \subsubsection{Causality}\label{causality}}
 
@@ -284,16 +326,15 @@ origins span many disciplines, including early statisticians (Fisher
 inference as using theory and expert institutional knowledge to estimate
 the impact of events or decisions on a given outcome of interest
 (Cunningham 2021). A naive assumption would be that prediction
-algorithms in machine learning cannot provide the rigour of empirical
-econometric design in extracting causal inference. But there is a
-growing sub-field of machine learning which tackles causality in two
-ways. Firstly, it can improve the predictive power of traditional
-econometrics by decoupling the search for relevant predictors from the
-search for specification (López de Prado 2018). Secondly, machine
-learning can play a key role in discovering new financial theories
-beyond the reach of traditional methods, such as a new theory in market
-microstructure that was used to predict the 2010 flash crash (Easley et
-al. 2020).
+algorithms in ML cannot provide the rigour of empirical econometric
+design in extracting causal inference. But there is a growing sub-field
+of ML which tackles causality in two ways. Firstly, it can improve the
+predictive power of traditional econometrics by decoupling the search
+for relevant predictors from the search for specification (López de
+Prado 2018). Secondly, machine learning can play a key role in
+discovering new financial theories beyond the reach of traditional
+methods, such as a new theory in market microstructure that was used to
+predict the 2010 flash crash (Easley et al. 2020).
 
 \hypertarget{hypotheses-assumptions-and-cultural-clashes}{%
 \subsubsection{Hypotheses, assumptions and cultural
@@ -308,9 +349,9 @@ algorithmic techniques to statistical science successes. He framed his
 argument as a culture problem where
 
 \begin{quote}
-\ldots the statistical community has been committed almost exclusively
-to data models\ldots where one assumes that a given stochastic data
-model generates the data. (Breiman 2001)
+..the statistical community has been committed almost exclusively to
+data models\ldots where one assumes that a given stochastic data model
+generates the data. (Breiman 2001)
 \end{quote}
 
 For the most part, the statistical community has now accepted machine
@@ -887,6 +928,10 @@ data} in a more thoughtful, transparent and significant matter. But,
 perhaps most important is that by learning generalisable coding/data
 skills, a student an adequately prepared to into an industry where
 technologies are rapidly evolving.
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-Apley2020}{}%

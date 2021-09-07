@@ -14,6 +14,7 @@ keywords:
   - Financial technology
   - Financial machine learning
   - Financial econometrics
+  - Statistical inference
   - Cloud computing
   - Employability 
 bibliography: biblio.bib
@@ -47,6 +48,7 @@ The UK is leading the way in FinTech innovation and are forging on with a large 
 This paper provides an overview of the opportunities and challenges for the finance education curricula in the fast-paced world of financial technology innovations.  We specifically focus on how econometrics is changing, the emerging field of financial machine learning, and how to embed computation to facilitate a frictionless approach to teaching.  We provide an overview of how this has been achieved in the Management School of Queens University Belfast using an enterprise-scale cloud computing infrastructure and a suite of enterprise-level web software.
 
 # Background
+
 ## What is financial machine learning (hereafter FML)?
 Machine learning (hereafter ML) has been adopted at a pace in many real-world applications but has been slow to develop in areas of scientific research, especially economic analysis, where traditional econometric techniques dominate.  Leading econometricians argue this is due to a clashing culture [@Athey2019a], where some financial economists view the ontological differences in econometrics and machine learning as intractable. This naive comparison highlights the epistemological challenges computer age statistical inference faces in a world of rapid algorithmic development [@Efron2016]. FML is a subfield of AI in its infancy, attempting to reconcile the differences between econometrics and ML.
 
@@ -81,9 +83,17 @@ In contrast, machine learning models focus on outcome prediction, where the data
 
 Thus the challenge for modern computationally literate finance graduate is to understand the inferential benefits of machine learning through the lens of financial econometrics. For inference to be convincing, more work must be done on statistical consistency of machine learning models.  For instance, in the area of explainable AI (XAI), great strides have been made on producing statistical consistent and cognitive convincing explanations of the importance of predictors in the ML model [@Barredo_Arrieta2020].  For instance in recent years there have been notable advances. For example second-generation p-values can be included in a penalised regression model to yield tangible advantages for balancing support recovery, parameter estimation, and prediction tasks [@Blume2019; @Zuo2021]. 
 
-#### Modelling paradigm
+### Modelling paradigm
 
-Statistics is the science of learning from experience [@Efron2019], but unlike many other disciplines in mathematics, there is no unifying statistical theory.  Traditional econometrics has long favoured the frequentist paradigm, but with the increase in computer power, improvements in Markov Chain Monte Carlo (MCMC) methods, and advances in probabilistic programming bayesian inference more common place in finance. Yet teaching statistical inference in finance is still dominated by frequentism, with bayesian inference a footnote at best.  The perception among some educators is that bayesian statistics are too complex a topic for introductory course, but the human brian is a inference engine which intuitively learns concepts are more intuitive and more easy to teach in an introductory course.  A naive assumption is that these paradigms are competing and in traditional econometrics, the frequentist approach is preferred due to its ability to be more objective.  But objectivity is explicitly linked to the analyst’s confidence in the prior belief that asymptotic properties of frequentist methods hold true. But bayesian inference does require the additional assumption of prior probabilities, which is a step too far for tradition econometricians.
+Statistics is the science of learning from experience [@Efron2016], to reduce the uncertainty and variation around problem investigated.  No one theory can cover such a nebulous target as *learning from experience*, thus there is no unifying statistical theory. Broadly, speaking their are two modelling paradigms; Frequentism and Bayesianism.  Much of the inference discussion in the previous section is based on the frequentist approach.    
+
+
+Traditional econometrics has long favoured the frequentist paradigm, but with the increases in computer power, improvements in Markov Chain Monte Carlo (MCMC) methods, and advances in probabilistic programming bayesian inference in increasing in popularity in some areas of finance. Yet teaching statistical inference in finance is still dominated by frequentism, with bayesian inference a footnote at best.  The perception among some educators is that bayesian statistics are too complex a topic for introductory courses. In our experience, bayesian inference, with its principle of updating beliefs from new evidence, as a concept can be  intuitively appeal given it similarity to the human brain works as an inference engine which intuitively learns and adapts from experience.  
+
+
+
+
+are more intuitive and more easy to teach in an introductory course.  A naive assumption is that these paradigms are competing and in traditional econometrics, the frequentist approach is preferred due to its ability to be more objective.  But objectivity is explicitly linked to the analyst’s confidence in the prior belief that asymptotic properties of frequentist methods hold true. But bayesian inference does require the additional assumption of prior probabilities, which is a step too far for tradition econometricians.
 
 bit on Efron
 
@@ -178,7 +188,7 @@ timeline_data<-tibble(
   group=c(rep("Finance",i),rep("Cloud computing",j))) %>%
   mutate(y_pos=ifelse(group=="Finance",0.001,1))
 timeline_data %>%
-  ggplot(aes(x=start,y=y_pos,fill=group,label=event)) + geom_label_repel(size=1.3,arrow =arrow(length=unit(0.02,'npc')),box.padding = 1,segment.alpha = 0.5) + scale_x_date(date_labels = "%Y",date_breaks = "4 years",sec.axis = dup_axis(name = "")) +
+  ggplot(aes(x=start,y=y_pos,fill=group,label=event)) + geom_label_repel(size=1.1,arrow =arrow(length=unit(0.02,'npc')),box.padding = 1,segment.alpha = 0.5) + scale_x_date(date_labels = "%Y",date_breaks = "4 years",sec.axis = dup_axis(name = "")) +
   labs(y="",x="",fill="") + scale_fill_brewer(type = "qual") +
   theme(legend.position = "bottom",
         axis.ticks.y = element_blank(),
@@ -219,7 +229,7 @@ We argue there is a significant learning curve for the novice student, which isn
 
 ## Why RStudio Teams?
 
-Figure 1 visualises the components that make up the RStudio Team bundle. 
+Figure 2 visualises the components that make up the RStudio Team bundle. 
 
 ```{r rstudioteams, fig.cap="The three components of the RStudio Enterprise Team Bundle",out.width="70%"}
 knitr::include_graphics('img/Team.png',auto_pdf = T)
@@ -335,3 +345,5 @@ Pedagogically, by embedding computation in a centralised frictionless way, we ca
 The infrastructure and toolkit we described above ensure buy-in by making computing a central component of courses and assessments.  Using GitHub as the sole course management tool forces students to become familiar early, ensuring questions and problems are dealt with at least before the first assignment date.  Furthermore, requiring students to submit assignments using R Markdown forces students to using a literate programming approach, ensures reproducibility and embed the PPDAC principles in their work. Finally, from an employability perspective, indoctrinating students early with these reproducibility and workflow principles inoculates any bad computational habits forming, which are much harder to retrain out of financial researchers. 
 
 Importantly, we want to enable students and colleagues to centralise computation in frictionless and agile education. We hope this can result in a more meaningful approach to *solving business problems with data* in a more thoughtful, transparent and significant matter.  But, perhaps most important is that by learning generalisable coding/data skills, a student an adequately prepared to into an industry where technologies are rapidly evolving. 
+
+# References
