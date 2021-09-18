@@ -12,8 +12,10 @@ abstract: |
 keywords:
   - Finance education
   - Financial technology
+  - Statistical inference
   - Financial data science
-  - Financial machine learning and econometrics
+  - Financial machine learning
+  - Econometrics
   - Cloud computing
   - Employability 
 bibliography: biblio.bib
@@ -61,14 +63,15 @@ Changes in each of these building blocks produce a wide variety of learning algo
 
 FML attempts to reconcile three broad conflicts between ML and econometrics[@Lommers2021]:
 
-1. The importance of statistical inference;
+1. The importance of statistical inference and modelling paradigm;
 2. Causality;
-3. A prior hypotheses and model assumptions.
+3. An a priori hypotheses and model assumptions.
 
+In what follows we consider each of these conflicts in term.  We begin with the choice of estimation models.
 
 ## Modelling paradigm
 
-To move from computation to inference in statistics we most make a estimation choice.  Mathematical statistics is the science of learning from experience that arrives a little at a time [@Efron2016], and using this information to quantify uncertainty and variation[@Spiegelhalter2019]. Unlike many other disciplines in mathematics, there is no unifying theory. Reliable inference from statistics requires careful thought beyond the computing algorithm. The modern financial data scientist is faced with a choice between two abstracting *leaps of faith* in order to go from computation to meaningful inference. Broadly speaking, the theoretical paradigms are frequentist and bayesian inference^[Roughly speaking, frequentists infer meaning by asking themselves *what would I see if I reran the same situation again (and again and again and again,..., ad infinitum, et ultra)?*. On the other hand, bayesians coax a fantastical belief that *they have prior knowledge of situation, encode this in probability, and update this knowledge by learning from a set of observed data points*.  In essence, to generalise from statistical measurement one need to be somewhat of a fantasist.]   
+To move from computation to inference in statistics we most make a estimation choice.  Mathematical statistics is the science of learning from experience that arrives a little at a time [@Efron2016], and using this information to quantify uncertainty and variation[@Spiegelhalter2019]. Unlike many other disciplines in mathematics, there is no unifying theory. Reliable inference from statistics requires careful thought beyond the computing algorithm. The modern financial data scientist is faced with a choice between two abstracting *leaps of faith* in order to go from computation to meaningful inference. Broadly speaking, the theoretical inference paradigms are classical (or frequentist) and bayesian .^[Roughly speaking, frequentists infer meaning by asking themselves *what would I see if I reran the same situation again (and again and again and again,..., ad infinitum, et ultra)?*. On the other hand, bayesians coax a fantastical belief that *they have prior knowledge of situation, encode this in probability, and update this knowledge by learning from a set of observed data points*.  In essence, to generalise from statistical measurement one need to be somewhat of a fantasist.]. The goal of this paper is to present a disinterested perspective on both paradigms, and provide some guidance on when and why each choice is preferred in financial data science problems.  
 
 ### Frequentist inference
 With its developmental beginnings in 1900, frequentism has grown to dominate 20^th^ century statistical inference in finance. A remarkably potent theory, it was primarily designed to produce maximally efficient statistical analysis using small data collected under strictly controlled conditions.
@@ -301,7 +304,8 @@ $$\frac{g(\mu_1|x)}{g(\mu_2|x)}=\frac{g(\mu_1)}{g(\mu_1)}\frac{f_{\mu_1}(x)}{f_{
 
 ### Comparing modelling paradigms
 
-![](/Users/barry/Dropbox/Teaching/FinancialMachineLearning/ati_infer/img/casi_bayesianvdfrequentist.png)
+![](/Users/barry/Dropbox/Teaching/FinancialMachineLearning/ati_infer/img/casi_bayesianvdfrequentist.png){style="center" height='20em' width='20em'}
+
 Bayesians and frequentists start out on the same playing field, a family of probability distributions $f_{\mu}(x)$.  But play the game in orthogonal directions, as indicated schematically in Figure 3.5  Bayesian inference proceeds vertically, with x fixed, according to the posterior distribution $g(u|x)$.  Frequentists reason horizontally, with fixed $\mu$ and x varying.  There are advantages and disadvantages accrue to both strategies.
 
 Bayesian inference requires a prior distribution $g(\mu)$.  When past experience provides $g(\mu)$,there is every good reason to employ Bayes’ theorem.  If not, techniques such as those of [Jeffreys](https://en.wikipedia.org/wiki/Jeffreys_prior) still permit the use of Bayes’ rule, but the results lack the full logical force of the theorem.  The Bayesian’s right to ignore selection bias, for instance, must then be treated with caution.  Frequentism replaces the choice of a prior with the choice of a method, or algorithm, $t(x)$, designed to answer the specific question at hand.  This adds an arbitrary element to the inferential process, and can lead contradictions.  Optimal choice of $t(x)$ reduces arbitrary behavior, but computer-age applications typically move outside the safe waters of classical optimality theory, lending an ad-hoc character to frequentist analyses.

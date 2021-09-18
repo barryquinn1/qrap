@@ -65,9 +65,13 @@ practicioners.
    \and
     Financial technology
    \and
+    Statistical inference
+   \and
     Financial data science
    \and
-    Financial machine learning and econometrics
+    Financial machine learning
+   \and
+    Econometrics
    \and
     Cloud computing
    \and
@@ -199,12 +203,15 @@ econometrics(Lommers, Harzli, and Kim 2021):
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  The importance of statistical inference;
+  The importance of statistical inference and modelling paradigm;
 \item
   Causality;
 \item
-  A prior hypotheses and model assumptions.
+  An a priori hypotheses and model assumptions.
 \end{enumerate}
+
+In what follows we consider each of these conflicts in term. We begin
+with the choice of estimation models.
 
 \hypertarget{modelling-paradigm}{%
 \subsection{Modelling paradigm}\label{modelling-paradigm}}
@@ -218,16 +225,18 @@ mathematics, there is no unifying theory. Reliable inference from
 statistics requires careful thought beyond the computing algorithm. The
 modern financial data scientist is faced with a choice between two
 abstracting \emph{leaps of faith} in order to go from computation to
-meaningful inference. Broadly speaking, the theoretical paradigms are
-frequentist and bayesian inference\footnote{Roughly speaking,
-  frequentists infer meaning by asking themselves \emph{what would I see
-  if I reran the same situation again (and again and again and
-  again,\ldots, ad infinitum, et ultra)?}. On the other hand, bayesians
-  coax a fantastical belief that \emph{they have prior knowledge of
-  situation, encode this in probability, and update this knowledge by
-  learning from a set of observed data points}. In essence, to
-  generalise from statistical measurement one need to be somewhat of a
-  fantasist.}
+meaningful inference. Broadly speaking, the theoretical inference
+paradigms are classical (or frequentist) and bayesian .\footnote{Roughly
+  speaking, frequentists infer meaning by asking themselves \emph{what
+  would I see if I reran the same situation again (and again and again
+  and again,\ldots, ad infinitum, et ultra)?}. On the other hand,
+  bayesians coax a fantastical belief that \emph{they have prior
+  knowledge of situation, encode this in probability, and update this
+  knowledge by learning from a set of observed data points}. In essence,
+  to generalise from statistical measurement one need to be somewhat of
+  a fantasist.}. The goal of this paper is to present a disinterested
+perspective on both paradigms, and provide some guidance on when and why
+each choice is preferred in financial data science problems.
 
 \hypertarget{frequentist-inference}{%
 \subsubsection{Frequentist inference}\label{frequentist-inference}}
@@ -559,7 +568,8 @@ Formally, this is defined for any two points \(\mu_1\) and \(\mu_2\) on
 \subsubsection{Comparing modelling
 paradigms}\label{comparing-modelling-paradigms}}
 
-\includegraphics{/Users/barry/Dropbox/Teaching/FinancialMachineLearning/ati_infer/img/casi_bayesianvdfrequentist.png}
+\includegraphics[width=20em,height=20em]{/Users/barry/Dropbox/Teaching/FinancialMachineLearning/ati_infer/img/casi_bayesianvdfrequentist.png}
+
 Bayesians and frequentists start out on the same playing field, a family
 of probability distributions \(f_{\mu}(x)\). But play the game in
 orthogonal directions, as indicated schematically in Figure 3.5 Bayesian
