@@ -1,5 +1,5 @@
 ---
-title: "Teaching statistical inference in the age of financial technology"
+title: "Teaching open science analytics in the age of financial technology"
 authors:
   - name: Barry Quinn
     thanks: A special thanks to Dr Alan Hanna for his insightful comments.
@@ -8,8 +8,9 @@ authors:
     location: Belfast
     email: b.quinn@qub.ac.uk
 abstract: |
-  This paper seeks to understand the challenges of teaching statistical inference in finance in the computer age.  We argue that the unstoppable algorithmic tranformation of financial services, and the nascent field of financial machine learning provide an opportunity to redesign finance programmes for the age of financial technology. We argue it is time for a rethink how we can extract reliable statistical inference from financial data given proliferation of computing, *Big financial data*, and the unstoppable algorithmisation the finance industry. The paper begins by agnostically profiling the modelling paradigm choice. Next we establish the developments in statistical inference in the computer age specific to finance. Finally, we consider the idea of placing computation as a central tennent in finance curicullum, and discuss the infrastructure and tools involved.  We illustrate a use case where the infrastrcture is on-boarded in a cloud computing suite with enterprise-level server software. We are not arguing that finance is computation, rather that by placing computation as a frictionless part of the curicullum, students can engage with the full suite of state-of-the-art inferential tools avaliable to financial data science practicioners.    
+  We consider the challenge of teaching open science analytics in finance in the computer age.  There is a crisis of confidence in science; especially finance. We argue that the unstoppable algorithmic tranformation of financial services, and the nascent field of financial machine learning provide an opportunity to redesign finance programmes for the age of financial technology. We argue it is time for a rethink how we can extract reliable statistical inference from financial data given proliferation of computing, *Big financial data*, and the unstoppable algorithmisation the finance industry. The paper begins by agnostically profiling the modelling paradigm choice. Next we establish the developments in statistical inference in the computer age specific to finance. Finally, we consider the idea of placing computation as a central tennent in finance curicullum, and discuss the infrastructure and tools involved.  We illustrate a use case where the infrastrcture is on-boarded in a cloud computing suite with enterprise-level server software. We are not arguing that finance is computation, rather that by placing computation as a frictionless part of the curicullum, students can engage with the full suite of state-of-the-art inferential tools avaliable to financial data science practicioners.    
 keywords:
+  - Open source analytics
   - Finance education
   - Financial technology
   - Statistical inference
@@ -38,6 +39,8 @@ knitr::opts_chunk$set(echo = FALSE,fig.align = "center",warning = FALSE, comment
 pacman::p_load('flextable','tidyverse')
 ```
 # Introduction
+
+The open science movement is a global initiative to combat a crisis of confidence in scientific research. This credibility crisis spans many fields, including,  medicine (Ioannidis, 2005), psychology (Nosek et al., 2012), management (Bettis, 2012), experimental economics (Maniadis et al., 2017), and financial economics (Kelly et al. 2022). In business schools, this crisis has two distinct but interconnected parts. A crisis of confidence in knowledge published in journal and by extension a crisis of relevance in the classroom, where the mission is to provide education guided by research[@RRBM.2020].  In this paper, we seek to understand the challenge of teaching responsible analytics in the fast movement age of financial technology.
 
 The algorithmic transformation of financial services has seen the financial technology (FinTech) industry surge from the sidelines to the mainstream^[*A progress report on fintech's record-breaking year* by Nicholas Megaw August 2021. https://www.ft.com/content/89ea3d5d-cd29-46ec-88f1-67729b09a7c2?shareType=nongift].  This is especially true in the United Kingdom, where FinTech is viewed as **a permanent technology revolution that is changing the way we do finance**^[Kalifa Review of UK FinTech 2021, https://www.gov.uk/government/publications/the-kalifa-review-of-uk-fintech].  FinTech is multidisciplinary and is moving from the technological era of *social, mobile, analytics and cloud*(SMAC) to a future where *distributed ledger technology, artificial intelligence, extended reality, Quantum computing*(DARQ) technologies are the next differentiator combination. For students to remain relevant in this fast-paced world, the use of computation to enable reliable inference most play a central role in curiccula.
 
