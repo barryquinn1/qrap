@@ -1,0 +1,1726 @@
+{
+  "search-results": {
+    "opensearch:totalResults": "43558",
+    "opensearch:startIndex": "0",
+    "opensearch:itemsPerPage": "25",
+    "opensearch:Query": {
+      "@role": "request",
+      "@searchTerms": "TITLE-ABS-KEY ( statistical  AND  inference )  AND  ( LIMIT-TO ( SRCTYPE ,  \"j\" )  OR  LIMIT-TO ( SRCTYPE ,  \"b\" ) ) ",
+      "@startPage": "0"
+    },
+    "link": [
+      {
+        "@_fa": "true",
+        "@ref": "self",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY+%28+statistical++AND++inference+%29++AND++%28+LIMIT-TO+%28+SRCTYPE+%2C++%22j%22+%29++OR++LIMIT-TO+%28+SRCTYPE+%2C++%22b%22+%29+%29+&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "first",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=0&count=25&query=TITLE-ABS-KEY+%28+statistical++AND++inference+%29++AND++%28+LIMIT-TO+%28+SRCTYPE+%2C++%22j%22+%29++OR++LIMIT-TO+%28+SRCTYPE+%2C++%22b%22+%29+%29+&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "next",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=25&count=25&query=TITLE-ABS-KEY+%28+statistical++AND++inference+%29++AND++%28+LIMIT-TO+%28+SRCTYPE+%2C++%22j%22+%29++OR++LIMIT-TO+%28+SRCTYPE+%2C++%22b%22+%29+%29+&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      },
+      {
+        "@_fa": "true",
+        "@ref": "last",
+        "@href": "https://api.elsevier.com/content/search/scopus?start=4975&count=25&query=TITLE-ABS-KEY+%28+statistical++AND++inference+%29++AND++%28+LIMIT-TO+%28+SRCTYPE+%2C++%22j%22+%29++OR++LIMIT-TO+%28+SRCTYPE+%2C++%22b%22+%29+%29+&apiKey=7f59af901d2d86f78a1fd60c1bf9426a",
+        "@type": "application/json"
+      }
+    ],
+    "entry": [
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85115446752"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85115446752?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85115446752&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85115446752&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85115446752",
+        "dc:identifier": "SCOPUS_ID:85115446752",
+        "eid": "2-s2.0-85115446752",
+        "dc:title": "Topic Modeling Using Latent Dirichlet allocation: A Survey",
+        "dc:creator": "Chauhan U.",
+        "prism:publicationName": "ACM Computing Surveys",
+        "prism:issn": "03600300",
+        "prism:eIssn": "15577341",
+        "prism:volume": "54",
+        "prism:issueIdentifier": "7",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-09-01",
+        "prism:coverDisplayDate": "September 2022",
+        "prism:doi": "10.1145/3462478",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Vishwakarma Government Engineering College",
+            "affiliation-city": "Ahmedabad",
+            "affiliation-country": "India"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "145",
+        "source-id": "23038",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118897018"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118897018?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85118897018&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85118897018&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0378375821001063"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85118897018",
+        "dc:identifier": "SCOPUS_ID:85118897018",
+        "eid": "2-s2.0-85118897018",
+        "dc:title": "Correcting for linkage errors in contingency tables\u2014A cautionary tale",
+        "dc:creator": "Scholtus S.",
+        "prism:publicationName": "Journal of Statistical Planning and Inference",
+        "prism:issn": "03783758",
+        "prism:volume": "218",
+        "prism:pageRange": "122-137",
+        "prism:coverDate": "2022-05-01",
+        "prism:coverDisplayDate": "May 2022",
+        "prism:doi": "10.1016/j.jspi.2021.10.004",
+        "pii": "S0378375821001063",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Centraal Bureau voor de Statistiek",
+            "affiliation-city": "The Hague",
+            "affiliation-country": "Netherlands"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "12136",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118500401"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118500401?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85118500401&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85118500401&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0378375821001051"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85118500401",
+        "dc:identifier": "SCOPUS_ID:85118500401",
+        "eid": "2-s2.0-85118500401",
+        "dc:title": "Gibbs posterior inference on multivariate quantiles",
+        "dc:creator": "Bhattacharya I.",
+        "prism:publicationName": "Journal of Statistical Planning and Inference",
+        "prism:issn": "03783758",
+        "prism:volume": "218",
+        "prism:pageRange": "106-121",
+        "prism:coverDate": "2022-05-01",
+        "prism:coverDisplayDate": "May 2022",
+        "prism:doi": "10.1016/j.jspi.2021.10.003",
+        "pii": "S0378375821001051",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "University of Rochester Medical Center",
+            "affiliation-city": "Rochester",
+            "affiliation-country": "United States"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "12136",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryam"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119682318"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119682318?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119682318&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119682318&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S016794732100236X"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119682318",
+        "dc:identifier": "SCOPUS_ID:85119682318",
+        "eid": "2-s2.0-85119682318",
+        "dc:title": "Conditional independence test of failure and truncation times: Essential tool for method selection",
+        "dc:creator": "Ning J.",
+        "prism:publicationName": "Computational Statistics and Data Analysis",
+        "prism:issn": "01679473",
+        "prism:volume": "168",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-04-01",
+        "prism:coverDisplayDate": "April 2022",
+        "prism:doi": "10.1016/j.csda.2021.107402",
+        "pii": "S016794732100236X",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "University of Texas MD Anderson Cancer Center",
+            "affiliation-city": "Houston",
+            "affiliation-country": "United States"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "107402",
+        "source-id": "28461",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119291954"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119291954?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119291954&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119291954&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0096300321008390"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119291954",
+        "dc:identifier": "SCOPUS_ID:85119291954",
+        "eid": "2-s2.0-85119291954",
+        "dc:title": "Reliability estimation from two types of accelerated testing data based on an artificial neural network supported Wiener process",
+        "dc:creator": "Liu D.",
+        "prism:publicationName": "Applied Mathematics and Computation",
+        "prism:issn": "00963003",
+        "prism:volume": "417",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-03-15",
+        "prism:coverDisplayDate": "15 March 2022",
+        "prism:doi": "10.1016/j.amc.2021.126757",
+        "pii": "S0096300321008390",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Beihang University",
+            "affiliation-city": "Beijing",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "126757",
+        "source-id": "25170",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119493622"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119493622?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119493622&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119493622&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0888613X2100181X"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119493622",
+        "dc:identifier": "SCOPUS_ID:85119493622",
+        "eid": "2-s2.0-85119493622",
+        "dc:title": "Abduction with probabilistic logic programming under the distribution semantics",
+        "dc:creator": "Azzolini D.",
+        "prism:publicationName": "International Journal of Approximate Reasoning",
+        "prism:issn": "0888613X",
+        "prism:volume": "142",
+        "prism:pageRange": "41-63",
+        "prism:coverDate": "2022-03-01",
+        "prism:coverDisplayDate": "March 2022",
+        "prism:doi": "10.1016/j.ijar.2021.11.003",
+        "pii": "S0888613X2100181X",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "University of Ferrara",
+            "affiliation-city": "Ferrara",
+            "affiliation-country": "Italy"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "24286",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117112848"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117112848?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85117112848&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85117112848&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0167947321001997"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85117112848",
+        "dc:identifier": "SCOPUS_ID:85117112848",
+        "eid": "2-s2.0-85117112848",
+        "dc:title": "Mixture additive hazards cure model with latent variables: Application to corporate default data",
+        "dc:creator": "Yang Q.",
+        "prism:publicationName": "Computational Statistics and Data Analysis",
+        "prism:issn": "01679473",
+        "prism:volume": "167",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-03-01",
+        "prism:coverDisplayDate": "March 2022",
+        "prism:doi": "10.1016/j.csda.2021.107365",
+        "pii": "S0167947321001997",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Shandong University",
+            "affiliation-city": "Jinan",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "107365",
+        "source-id": "28461",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85116892168"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85116892168?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85116892168&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85116892168&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0167947321001961"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85116892168",
+        "dc:identifier": "SCOPUS_ID:85116892168",
+        "eid": "2-s2.0-85116892168",
+        "dc:title": "Parameter estimation and computation of the Fisher information matrix for functions of phase type random variables",
+        "dc:creator": "Pavithra C.R.",
+        "prism:publicationName": "Computational Statistics and Data Analysis",
+        "prism:issn": "01679473",
+        "prism:volume": "167",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-03-01",
+        "prism:coverDisplayDate": "March 2022",
+        "prism:doi": "10.1016/j.csda.2021.107362",
+        "pii": "S0167947321001961",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Indian Institute of Space Science and Technology",
+            "affiliation-city": "Thiruvananthapuram",
+            "affiliation-country": "India"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "107362",
+        "source-id": "28461",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85115890073"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85115890073?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85115890073&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85115890073&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0167947321001845"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85115890073",
+        "dc:identifier": "SCOPUS_ID:85115890073",
+        "eid": "2-s2.0-85115890073",
+        "dc:title": "Selective inference for additive and linear mixed models",
+        "dc:creator": "R\u00fcgamer D.",
+        "prism:publicationName": "Computational Statistics and Data Analysis",
+        "prism:issn": "01679473",
+        "prism:volume": "167",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-03-01",
+        "prism:coverDisplayDate": "March 2022",
+        "prism:doi": "10.1016/j.csda.2021.107350",
+        "pii": "S0167947321001845",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Ludwig-Maximilians-Universit\u00e4t M\u00fcnchen",
+            "affiliation-city": "Munich",
+            "affiliation-country": "Germany"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "107350",
+        "source-id": "28461",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryam"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85108222826"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85108222826?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85108222826&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85108222826&origin=inward"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85108222826",
+        "dc:identifier": "SCOPUS_ID:85108222826",
+        "eid": "2-s2.0-85108222826",
+        "dc:title": "Prediction of Surface Oil Rates for Volatile Oil and Gas Condensate Reservoirs Using Artificial Intelligence Techniques",
+        "dc:creator": "Al Dhaif R.",
+        "prism:publicationName": "Journal of Energy Resources Technology, Transactions of the ASME",
+        "prism:issn": "01950738",
+        "prism:eIssn": "15288994",
+        "prism:volume": "144",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-03-01",
+        "prism:coverDisplayDate": "1 March 2022",
+        "prism:doi": "10.1115/1.4051298",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "King Fahd University of Petroleum and Minerals",
+            "affiliation-city": "Dhahran",
+            "affiliation-country": "Saudi Arabia"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "033001",
+        "source-id": "27019",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85112506465"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85112506465?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85112506465&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85112506465&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0888327021006506"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85112506465",
+        "dc:identifier": "SCOPUS_ID:85112506465",
+        "eid": "2-s2.0-85112506465",
+        "dc:title": "Real-time model calibration with deep reinforcement learning",
+        "dc:creator": "Tian Y.",
+        "prism:publicationName": "Mechanical Systems and Signal Processing",
+        "prism:issn": "08883270",
+        "prism:eIssn": "10961216",
+        "prism:volume": "165",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-15",
+        "prism:coverDisplayDate": "15 February 2022",
+        "prism:doi": "10.1016/j.ymssp.2021.108284",
+        "pii": "S0888327021006506",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "ETH Z\u00fcrich",
+            "affiliation-city": "Zurich ZH,",
+            "affiliation-country": "Switzerland"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "108284",
+        "source-id": "21080",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherhybridgold"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryvor"
+            },
+            {
+              "$": "repositoryam"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Hybrid Gold"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119423592"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119423592?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119423592&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119423592&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0276562421000822"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119423592",
+        "dc:identifier": "SCOPUS_ID:85119423592",
+        "eid": "2-s2.0-85119423592",
+        "dc:title": "Revisiting the historical trend of educational stratification in Soviet and post-Soviet Russia",
+        "dc:creator": "Yastrebov G.",
+        "prism:publicationName": "Research in Social Stratification and Mobility",
+        "prism:issn": "02765624",
+        "prism:volume": "77",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.rssm.2021.100662",
+        "pii": "S0276562421000822",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "University of Cologne",
+            "affiliation-city": "Koln",
+            "affiliation-country": "Germany"
+          }
+        ],
+        "prism:aggregationType": "Book Series",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "100662",
+        "source-id": "4100151507",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119414128"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119414128?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119414128&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119414128&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S2213138821007979"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119414128",
+        "dc:identifier": "SCOPUS_ID:85119414128",
+        "eid": "2-s2.0-85119414128",
+        "dc:title": "Low-cost bilayered structure for improving the performance of solar stills: Performance/cost analysis and water yield prediction using machine learning",
+        "dc:creator": "Elsheikh A.H.",
+        "prism:publicationName": "Sustainable Energy Technologies and Assessments",
+        "prism:issn": "22131388",
+        "prism:volume": "49",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.seta.2021.101783",
+        "pii": "S2213138821007979",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Tanta University",
+            "affiliation-city": "Tanta",
+            "affiliation-country": "Egypt"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "101783",
+        "source-id": "21100239262",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherfree2read"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Bronze"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119066568"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119066568?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119066568&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119066568&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1746809421009241"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119066568",
+        "dc:identifier": "SCOPUS_ID:85119066568",
+        "eid": "2-s2.0-85119066568",
+        "dc:title": "An optimized GMM algorithm and its application in single-trial motor imagination recognition",
+        "dc:creator": "Fu R.",
+        "prism:publicationName": "Biomedical Signal Processing and Control",
+        "prism:issn": "17468094",
+        "prism:eIssn": "17468108",
+        "prism:volume": "72",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.bspc.2021.103327",
+        "pii": "S1746809421009241",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Yanshan University",
+            "affiliation-city": "Qinhuangdao",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "103327",
+        "source-id": "4700152237",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118885751"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118885751?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85118885751&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85118885751&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S095183202100627X"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85118885751",
+        "dc:identifier": "SCOPUS_ID:85118885751",
+        "eid": "2-s2.0-85118885751",
+        "dc:title": "Modelling and estimation of system reliability under dynamic operating environments and lifetime ordering constraints",
+        "dc:creator": "Luo C.",
+        "prism:publicationName": "Reliability Engineering and System Safety",
+        "prism:issn": "09518320",
+        "prism:volume": "218",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.ress.2021.108136",
+        "pii": "S095183202100627X",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Hangzhou Normal University",
+            "affiliation-city": "Hangzhou",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "108136",
+        "source-id": "13853",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118866726"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85118866726?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85118866726&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85118866726&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0304380021003653"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85118866726",
+        "dc:identifier": "SCOPUS_ID:85118866726",
+        "eid": "2-s2.0-85118866726",
+        "dc:title": "A hierarchical Bayesian approach for incorporating expert opinions into parametric survival models: A case study of female Ixodes ricinus ticks exposed to various temperature and relative humidity conditions",
+        "dc:creator": "Wongnak P.",
+        "prism:publicationName": "Ecological Modelling",
+        "prism:issn": "03043800",
+        "prism:volume": "464",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.ecolmodel.2021.109821",
+        "pii": "S0304380021003653",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Universit\u00e9 Clermont Auvergne",
+            "affiliation-city": "Clermont-Ferrand",
+            "affiliation-country": "France"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Universit\u00e9 de Lyon",
+            "affiliation-city": "Lyon",
+            "affiliation-country": "France"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "109821",
+        "source-id": "23274",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "publisherhybridgold"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryvor"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Hybrid Gold"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117364270"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117364270?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85117364270&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85117364270&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0142112321003893"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85117364270",
+        "dc:identifier": "SCOPUS_ID:85117364270",
+        "eid": "2-s2.0-85117364270",
+        "dc:title": "Bayesian inference-based decision of fatigue life model for metal additive manufacturing considering effects of build orientation and post-processing",
+        "dc:creator": "Doh J.",
+        "prism:publicationName": "International Journal of Fatigue",
+        "prism:issn": "01421123",
+        "prism:volume": "155",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.ijfatigue.2021.106535",
+        "pii": "S0142112321003893",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Singapore University of Technology and Design",
+            "affiliation-city": null,
+            "affiliation-country": "Singapore"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Gyeongsang National University",
+            "affiliation-city": "Jinju",
+            "affiliation-country": "South Korea"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "106535",
+        "source-id": "21105",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85114430184"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85114430184?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85114430184&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85114430184&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1871101421000807"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85114430184",
+        "dc:identifier": "SCOPUS_ID:85114430184",
+        "eid": "2-s2.0-85114430184",
+        "dc:title": "Bayesian analysis of D<inf>e</inf> distributions in optical dating: Towards a robust method for dealing with outliers",
+        "dc:creator": "Li B.",
+        "prism:publicationName": "Quaternary Geochronology",
+        "prism:issn": "18711014",
+        "prism:volume": "67",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.quageo.2021.101230",
+        "pii": "S1871101421000807",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Faculty of Science, Medicine and Health",
+            "affiliation-city": "Wollongong",
+            "affiliation-country": "Australia"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "University of Wollongong",
+            "affiliation-city": "Wollongong",
+            "affiliation-country": "Australia"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "101230",
+        "source-id": "7200153173",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85113920898"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85113920898?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85113920898&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85113920898&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0167947321001699"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85113920898",
+        "dc:identifier": "SCOPUS_ID:85113920898",
+        "eid": "2-s2.0-85113920898",
+        "dc:title": "Bayesian inference for generalized linear model with linear inequality constraints",
+        "dc:creator": "Ghosal R.",
+        "prism:publicationName": "Computational Statistics and Data Analysis",
+        "prism:issn": "01679473",
+        "prism:volume": "166",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-02-01",
+        "prism:coverDisplayDate": "February 2022",
+        "prism:doi": "10.1016/j.csda.2021.107335",
+        "pii": "S0167947321001699",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Johns Hopkins University",
+            "affiliation-city": "Baltimore",
+            "affiliation-country": "United States"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "107335",
+        "source-id": "28461",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryam"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119425129"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119425129?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119425129&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119425129&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0165027021003460"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119425129",
+        "dc:identifier": "SCOPUS_ID:85119425129",
+        "eid": "2-s2.0-85119425129",
+        "dc:title": "Towards data-driven group inferences of resting-state fMRI data in rodents: Comparison of group ICA, GIG-ICA, and IVA-GL",
+        "dc:creator": "To X.V.",
+        "prism:publicationName": "Journal of Neuroscience Methods",
+        "prism:issn": "01650270",
+        "prism:eIssn": "1872678X",
+        "prism:volume": "366",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-01-15",
+        "prism:coverDisplayDate": "15 January 2022",
+        "prism:doi": "10.1016/j.jneumeth.2021.109411",
+        "pii": "S0165027021003460",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "The University of Queensland",
+            "affiliation-city": "Brisbane",
+            "affiliation-country": "Australia"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "109411",
+        "source-id": "16765",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119274758"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85119274758?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85119274758&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85119274758&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1352231021006440"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85119274758",
+        "dc:identifier": "SCOPUS_ID:85119274758",
+        "eid": "2-s2.0-85119274758",
+        "dc:title": "Sequential Monte Carlo sampler applied to source term estimation in complex atmospheric environments",
+        "dc:creator": "Septier F.",
+        "prism:publicationName": "Atmospheric Environment",
+        "prism:issn": "13522310",
+        "prism:eIssn": "18732844",
+        "prism:volume": "269",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-01-15",
+        "prism:coverDisplayDate": "15 January 2022",
+        "prism:doi": "10.1016/j.atmosenv.2021.118822",
+        "pii": "S1352231021006440",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Universite de Bretagne-Sud Campus de Vannes",
+            "affiliation-city": "Vannes",
+            "affiliation-country": "France"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "118822",
+        "source-id": "23357",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117791382"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117791382?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85117791382&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85117791382&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0360544221026268"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85117791382",
+        "dc:identifier": "SCOPUS_ID:85117791382",
+        "eid": "2-s2.0-85117791382",
+        "dc:title": "The nexus of renewable energy equity and agricultural commodities in the United States: Evidence of regime-switching and price bubbles",
+        "dc:creator": "Alola A.A.",
+        "prism:publicationName": "Energy",
+        "prism:issn": "03605442",
+        "prism:volume": "239",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-01-15",
+        "prism:coverDisplayDate": "15 January 2022",
+        "prism:doi": "10.1016/j.energy.2021.122377",
+        "pii": "S0360544221026268",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "\u0130stanbul Geli\u015fim \u00dcniversitesi",
+            "affiliation-city": "Istanbul",
+            "affiliation-country": "Turkey"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "South Ural State University",
+            "affiliation-city": "Chelyabinsk",
+            "affiliation-country": "Russian Federation"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Vaasan Yliopisto",
+            "affiliation-city": "Vaasa",
+            "affiliation-country": "Finland"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "122377",
+        "source-id": "29348",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117347601"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85117347601?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85117347601&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85117347601&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S030626192101326X"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85117347601",
+        "dc:identifier": "SCOPUS_ID:85117347601",
+        "eid": "2-s2.0-85117347601",
+        "dc:title": "Probabilistic and deterministic wind speed forecasting based on non-parametric approaches and wind characteristics information",
+        "dc:creator": "Heng J.",
+        "prism:publicationName": "Applied Energy",
+        "prism:issn": "03062619",
+        "prism:volume": "306",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-01-15",
+        "prism:coverDisplayDate": "15 January 2022",
+        "prism:doi": "10.1016/j.apenergy.2021.118029",
+        "pii": "S030626192101326X",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Academy of Mathematics and System Sciences Chinese Academy of Sciences",
+            "affiliation-city": "Beijing",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "118029",
+        "source-id": "28801",
+        "openaccess": "0",
+        "openaccessFlag": false
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85112785555"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85112785555?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85112785555&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85112785555&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0022247X21006405"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85112785555",
+        "dc:identifier": "SCOPUS_ID:85112785555",
+        "eid": "2-s2.0-85112785555",
+        "dc:title": "Optimal nonparametric inference via deep neural network",
+        "dc:creator": "Liu R.",
+        "prism:publicationName": "Journal of Mathematical Analysis and Applications",
+        "prism:issn": "0022247X",
+        "prism:eIssn": "10960813",
+        "prism:volume": "505",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-01-15",
+        "prism:coverDisplayDate": "15 January 2022",
+        "prism:doi": "10.1016/j.jmaa.2021.125561",
+        "pii": "S0022247X21006405",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Texas Tech University",
+            "affiliation-city": "Lubbock",
+            "affiliation-country": "United States"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "125561",
+        "source-id": "23935",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+          "value": [
+            {
+              "$": "all"
+            },
+            {
+              "$": "repository"
+            },
+            {
+              "$": "repositoryam"
+            }
+          ]
+        },
+        "freetoreadLabel": {
+          "value": [
+            {
+              "$": "All Open Access"
+            },
+            {
+              "$": "Green"
+            }
+          ]
+        }
+      },
+      {
+        "@_fa": "true",
+        "link": [
+          {
+            "@_fa": "true",
+            "@ref": "self",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85108119561"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "author-affiliation",
+            "@href": "https://api.elsevier.com/content/abstract/scopus_id/85108119561?field=author,affiliation"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus",
+            "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85108119561&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "scopus-citedby",
+            "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85108119561&origin=inward"
+          },
+          {
+            "@_fa": "true",
+            "@ref": "full-text",
+            "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0888327021004908"
+          }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85108119561",
+        "dc:identifier": "SCOPUS_ID:85108119561",
+        "eid": "2-s2.0-85108119561",
+        "dc:title": "Data-driven and active learning of variance-based sensitivity indices with Bayesian probabilistic integration",
+        "dc:creator": "Song J.",
+        "prism:publicationName": "Mechanical Systems and Signal Processing",
+        "prism:issn": "08883270",
+        "prism:eIssn": "10961216",
+        "prism:volume": "163",
+        "prism:pageRange": null,
+        "prism:coverDate": "2022-01-15",
+        "prism:coverDisplayDate": "15 January 2022",
+        "prism:doi": "10.1016/j.ymssp.2021.108106",
+        "pii": "S0888327021004908",
+        "citedby-count": "0",
+        "affiliation": [
+          {
+            "@_fa": "true",
+            "affilname": "Tokyo City University",
+            "affiliation-city": "Tokyo",
+            "affiliation-country": "Japan"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Gottfried Wilhelm Leibniz Universit\u00e4t Hannover",
+            "affiliation-city": "Hannover",
+            "affiliation-country": "Germany"
+          },
+          {
+            "@_fa": "true",
+            "affilname": "Northwestern Polytechnical University",
+            "affiliation-city": "Xi'an",
+            "affiliation-country": "China"
+          }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "108106",
+        "source-id": "21080",
+        "openaccess": "0",
+        "openaccessFlag": false
+      }
+    ]
+  }
+}

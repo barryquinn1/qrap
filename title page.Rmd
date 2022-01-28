@@ -1,0 +1,34 @@
+---
+title: "Teaching statistical inference in the age of financial technology"
+authors:
+  - name: Barry Quinn
+    thanks: A special thanks to Dr Alan Hanna for his insightful comments.
+    department: Queens Management School
+    affiliation: Queen's University Belfast
+    location: Belfast
+    email: b.quinn@qub.ac.uk
+abstract: |
+ This paper seeks to understand the challenges of teaching statistical inference in finance in the computer age. We argue that the unstoppable algorithmic transformation of financial services and the developing field of machine learning provide an opportunity to reboot financial econometrics for the financial technology era. We argue it is time for a rethink how we can extract reliable statistical inference from financial data given the proliferation of computing, Big financial data and the unstoppable algorithmisation of the finance industry. Firstly, we agnostically profiling the modelling paradigms avaliable in the FinTech era. Next, we establish the developments in statistical inference in the digital age. Finally, we consider placing computation as a central tenant in finance curricula and discuss the infrastructure and tools involved. We illustrate a use case where the infrastructure is on-boarded in a cloud computing suite with enterprise-level server software. We are not arguing that finance is computation; instead, by placing computation as a frictionless part of the curriculum, students can engage with the full suite of state-of-the-art inferential tools available to financial data science practitioners.    
+keywords:
+  - Finance education
+  - Financial technology
+  - Statistical inference
+  - Financial data science
+  - Financial machine learning
+  - Econometrics
+  - Cloud computing
+  - Employability 
+output: 
+  rticles::arxiv_article:
+    keep_tex: true
+header-includes:
+ \usepackage{booktabs}
+ \usepackage{longtable}
+ \usepackage{array}
+ \usepackage{multirow}
+ \usepackage[table]{xcolor}
+ \usepackage{wrapfig}
+ \usepackage{float}
+ \floatplacement{figure}{H}
+---
+

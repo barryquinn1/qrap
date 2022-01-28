@@ -1,0 +1,14 @@
+---
+title: "Cover letter"
+author: "Barry Quinn"
+date: "14/12/2021"
+output: pdf_document
+---
+
+Dear Professor Gady Jacoby and Professor Zhenyu Wu, 
+
+I appreciate your time and effort in organising this exciting opportunity.  Could you please consider this paper as submission to the special issue on FinTech.
+
+Yours Sincerely;
+
+[Barry Quinn](https://quinference.com)
