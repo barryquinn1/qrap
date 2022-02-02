@@ -13,11 +13,13 @@
 \usepackage{microtype}      % microtypography
 \usepackage{graphicx}
 
-\title{Teaching statistical inference in the age of financial technology}
+\title{Teaching open science analytics in the age of financial
+technology}
 
 \author{
     Barry Quinn
-    \thanks{A special thanks to Dr Alan Hanna for his insightful comments.}
+    \thanks{A special thanks to Dr Alan Hanna for his insightful
+comments.}
    \\
     Queens Management School \\
     Queen's University Belfast \\
@@ -28,6 +30,31 @@
 
 
 % Pandoc citation processing
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+% for Pandoc 2.8 to 2.10.1
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+% For Pandoc 2.11+
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc} % for calculating minipage widths
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{booktabs} \usepackage{longtable} \usepackage{array} \usepackage{multirow} \usepackage[table]{xcolor} \usepackage{wrapfig} \usepackage{float} \floatplacement{figure}{H}
 
@@ -39,27 +66,31 @@
 
 
 \begin{abstract}
-This paper seeks to understand the challenges of teaching statistical
-inference in finance in the computer age. We argue that the unstoppable
-algorithmic transformation of financial services and the developing
-field of machine learning provide an opportunity to reboot financial
-econometrics for the financial technology era. We argue it is time for a
-rethink how we can extract reliable statistical inference from financial
-data given the proliferation of computing, Big financial data and the
-unstoppable algorithmisation of the finance industry. Firstly, we
-agnostically profiling the modelling paradigms avaliable in the FinTech
-era. Next, we establish the developments in statistical inference in the
-digital age. Finally, we consider placing computation as a central
-tenant in finance curricula and discuss the infrastructure and tools
-involved. We illustrate a use case where the infrastructure is
-on-boarded in a cloud computing suite with enterprise-level server
-software. We are not arguing that finance is computation; instead, by
-placing computation as a frictionless part of the curriculum, students
-can engage with the full suite of state-of-the-art inferential tools
-available to financial data science practitioners.
+We consider the challenge of teaching open science analytics in finance
+in the computer age. There is a crisis of confidence in science;
+especially finance. We argue that the unstoppable algorithmic
+tranformation of financial services, and the nascent field of financial
+machine learning provide an opportunity to redesign finance programmes
+for the age of financial technology. We argue it is time for a rethink
+how we can extract reliable statistical inference from financial data
+given proliferation of computing, \emph{Big financial data}, and the
+unstoppable algorithmisation of the finance industry. The paper begins
+by agnostically profiling the modelling paradigm choice. Next we
+establish the developments in statistical inference in the computer age
+specific to finance. Finally, we consider the idea of placing
+computation as a central tennent in finance curicullum, and discuss the
+infrastructure and tools involved. We illustrate a use case where the
+infrastrcture is on-boarded in a cloud computing suite with
+enterprise-level server software. We are not arguing that finance is
+computation, rather that by placing computation as a frictionless part
+of the curicullum, students can engage with the full suite of
+state-of-the-art inferential tools avaliable to financial data science
+practicioners.
 \end{abstract}
 
 \keywords{
+    Open source analytics
+   \and
     Finance education
    \and
     Financial technology
@@ -80,8 +111,20 @@ available to financial data science practitioners.
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-The algorithmic transformation of financial services has seen the
-financial technology (FinTech) industry surge from the sidelines to the
+\hypertarget{the-algorithmic-transformation-of-financial-services-has-seen-the-financial-technology-fintech-industry-surge-from-the-sidelines-to-the-mainstream.-this-surge-is-especially-true-in-the-united-kingdom-where-fintech-is-viewed-as-a-permanent-technology-revolution-that-is-changing-the-way-we-do-finance.-fintech-is-multidisciplinary-and-is-moving-from-the-technological-era-of-social-mobile-analytics-and-cloudsmac-to-a-future-where-distributed-ledger-technology-artificial-intelligence-extended-reality-quantum-computingdarq-technologies-well-displace-smac.-for-students-to-remain-relevant-in-this-fast-paced-world-computation-to-enable-reliable-inference-must-play-a-central-role-in-curricula.}{%
+\section[The algorithmic transformation of financial services has seen
+the financial technology (FinTech) industry surge from the sidelines to
+the mainstream. This surge is especially true in the United Kingdom,
+where FinTech is viewed as \textbf{a permanent technology revolution
+that is changing the way we do finance}. FinTech is multidisciplinary
+and is moving from the technological era of \emph{social, mobile,
+analytics and cloud}(SMAC) to a future where \emph{distributed ledger
+technology, artificial intelligence, extended reality, Quantum
+computing}(DARQ) technologies well displace SMAC. For students to remain
+relevant in this fast-paced world, computation to enable reliable
+inference must play a central role in curricula.]{\texorpdfstring{The
+algorithmic transformation of financial services has seen the financial
+technology (FinTech) industry surge from the sidelines to the
 mainstream\footnote{\emph{A progress report on fintech's record-breaking
   year} by Nicholas Megaw August 2021.
   \url{https://www.ft.com/content/89ea3d5d-cd29-46ec-88f1-67729b09a7c2?shareType=nongift}}.
@@ -94,7 +137,37 @@ FinTech is multidisciplinary and is moving from the technological era of
 \emph{distributed ledger technology, artificial intelligence, extended
 reality, Quantum computing}(DARQ) technologies well displace SMAC. For
 students to remain relevant in this fast-paced world, computation to
-enable reliable inference must play a central role in curricula.
+enable reliable inference must play a central role in
+curricula.}{The algorithmic transformation of financial services has seen the financial technology (FinTech) industry surge from the sidelines to the mainstream. This surge is especially true in the United Kingdom, where FinTech is viewed as a permanent technology revolution that is changing the way we do finance. FinTech is multidisciplinary and is moving from the technological era of social, mobile, analytics and cloud(SMAC) to a future where distributed ledger technology, artificial intelligence, extended reality, Quantum computing(DARQ) technologies well displace SMAC. For students to remain relevant in this fast-paced world, computation to enable reliable inference must play a central role in curricula.}}\label{the-algorithmic-transformation-of-financial-services-has-seen-the-financial-technology-fintech-industry-surge-from-the-sidelines-to-the-mainstream.-this-surge-is-especially-true-in-the-united-kingdom-where-fintech-is-viewed-as-a-permanent-technology-revolution-that-is-changing-the-way-we-do-finance.-fintech-is-multidisciplinary-and-is-moving-from-the-technological-era-of-social-mobile-analytics-and-cloudsmac-to-a-future-where-distributed-ledger-technology-artificial-intelligence-extended-reality-quantum-computingdarq-technologies-well-displace-smac.-for-students-to-remain-relevant-in-this-fast-paced-world-computation-to-enable-reliable-inference-must-play-a-central-role-in-curricula.}}
+
+The open science movement is a global initiative to combat a crisis of
+confidence in scientific research. This credibility crisis spans many
+fields, including, medicine (Ioannidis, 2005), psychology (Nosek et al.,
+2012), management (Bettis, 2012), experimental economics (Maniadis et
+al., 2017), and financial economics (Kelly et al.~2022). In business
+schools, this crisis has two distinct but interconnected parts. A crisis
+of confidence in knowledge published in journal and by extension a
+crisis of relevance in the classroom, where the mission is to provide
+education guided by research(\textbf{RRBM.2020?}). In this paper, we
+seek to understand the challenge of teaching responsible analytics in
+the fast movement age of financial technology.
+
+The algorithmic transformation of financial services has seen the
+financial technology (FinTech) industry surge from the sidelines to the
+mainstream\footnote{\emph{A progress report on fintech's record-breaking
+  year} by Nicholas Megaw August 2021.
+  \url{https://www.ft.com/content/89ea3d5d-cd29-46ec-88f1-67729b09a7c2?shareType=nongift}}.
+This is especially true in the United Kingdom, where FinTech is viewed
+as \textbf{a permanent technology revolution that is changing the way we
+do finance}\footnote{Kalifa Review of UK FinTech 2021,
+  \url{https://www.gov.uk/government/publications/the-kalifa-review-of-uk-fintech}}.
+FinTech is multidisciplinary and is moving from the technological era of
+\emph{social, mobile, analytics and cloud}(SMAC) to a future where
+\emph{distributed ledger technology, artificial intelligence, extended
+reality, Quantum computing}(DARQ) technologies are the next
+differentiator combination. For students to remain relevant in this
+fast-paced world, the use of computation to enable reliable inference
+most play a central role in curiccula.
 
 While finance is a social science, many parts of modern finance are
 fundamentally quantitative, with financial practitioners solving
@@ -173,8 +246,8 @@ errors in statistical work depends on inferential statements built on
 the concepts of probability modelling, estimation, bias and variance. A
 central theme in modern statistical inference is uncertainty. Mainstream
 statistics has long argued that it is a mistake to use hypothesis tests
-or statistical significance to attribute certainty from noisy data (L
-and A 2016; R 2017, @Gelman2020).
+or statistical significance to attribute certainty from noisy data
+Gelman, Hill, and Vehtari (2020).
 
 There are three standard paradigms for thinking about statistical
 inference:
@@ -388,10 +461,10 @@ circumvent this defect, including the plugin principle\footnote{The
   frequentist accuracy estimate for the mean of x plugs in as an
   estimate of the variance of a single \(X\) draw from \(F\) into a
   formula relating the standard error to this said variance.}, Taylor
-series approximations\footnote{Statistics more complicated than a simple
-  average can often be related to the plugin formula by local linear
-  approximation sometimes know as the \emph{delta method}.}, parametric
-families and maximum likelihood theory, simulation and the
+series approximations\footnote{ Statistics more complicated than a
+  simple average can often be related to the plugin formula by local
+  linear approximation sometimes know as the \emph{delta method}.},
+parametric families and maximum likelihood theory, simulation and the
 bootstrap\footnote{modern computation has opened up the possibility of
   numerically implementing the \emph{infinite sequence of future trails}
   except for the endless part.}, and pivotal statistics\footnote{These
@@ -528,7 +601,7 @@ marbles. For each of these conjectures, we've counted up how many
 sequences, paths through the garden of forking data, could potentially
 produce the observed data,{[}blue,white,blue{]}.
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{l|l|l|l|r|r|r|r}
 \hline
@@ -563,7 +636,7 @@ can produce {[}bwb{]} \(\times\) prior plausibility of {[}bwww{]}
 Probability can be thought of as plausibility standardise and if we
 helpfully define p=1/4 (the proportion of marbles that are blue)
 
-\begin{table}[H]
+\begin{table}
 \centering
 \begin{tabular}{l|l|l|l|r|r|r}
 \hline
@@ -1013,8 +1086,8 @@ farm of dockerised instances. The Workbench product of the Teams suite
 online access to several integrated development environments
 (IDEs)\footnote{To date, the software ships with a Launcher package that
   facilitates access to Jupyter notebooks, Jupyterlab, RStudio IDE, and
-  Visual Studio} to script in both R and Python (``RStudio Workbench''
-2021).
+  Visual Studio} to script in both R and Python ({``{RStudio}
+Workbench''} 2021).
 
 Compared to the computer labs approach, our approach has three distinct
 benefits:
@@ -1089,7 +1162,7 @@ scale.
 \begin{itemize}
 \tightlist
 \item
-  (``RStudio Team'' 2021)
+  ({``{RStudio} Team''} 2021)
 \end{itemize}
 
 Teams is an enterprise-grade setup offered free of charge for academic
@@ -1451,239 +1524,245 @@ technologies are rapidly evolving.
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-Apley2020}{}%
-Apley, Daniel W, and Jingyu Zhu. 2020. ``Visualizing the Effects of
-Predictor Variables in Black Box Supervised Learning Models.'' \emph{J.
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Apley2020}{}}%
+Apley, Daniel W, and Jingyu Zhu. 2020. {``Visualizing the Effects of
+Predictor Variables in Black Box Supervised Learning Models.''} \emph{J.
 R. Stat. Soc. Series B Stat. Methodol.} 82 (4): 1059--86.
 
-\leavevmode\hypertarget{ref-Athey2019b}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Athey2019b}{}}%
 Athey, Susan, Mohsen Bayati, Guido Imbens, and Zhaonan Qu. 2019.
-``Ensemble Methods for Causal Effects in Panel Data Settings,'' March.
-\url{http://arxiv.org/abs/1903.10079}.
+{``Ensemble Methods for Causal Effects in Panel Data Settings,''} March.
+\url{https://arxiv.org/abs/1903.10079}.
 
-\leavevmode\hypertarget{ref-Athey2019a}{}%
-Athey, Susan, and Guido W Imbens. 2019. ``Machine Learning Methods That
-Economists Should Know About.'' \emph{Annu. Rev. Econom.} 11 (1):
+\leavevmode\vadjust pre{\hypertarget{ref-Athey2019a}{}}%
+Athey, Susan, and Guido W Imbens. 2019. {``Machine Learning Methods That
+Economists Should Know About.''} \emph{Annu. Rev. Econom.} 11 (1):
 685--725.
 
-\leavevmode\hypertarget{ref-Athey2019c}{}%
-Athey, Susan, Julie Tibshirani, and Stefan Wager. 2019. ``Generalized
-Random Forests.'' \emph{Aos} 47 (2): 1148--78.
+\leavevmode\vadjust pre{\hypertarget{ref-Athey2019c}{}}%
+Athey, Susan, Julie Tibshirani, and Stefan Wager. 2019. {``Generalized
+Random Forests.''} \emph{Aos} 47 (2): 1148--78.
 
-\leavevmode\hypertarget{ref-Athey2017}{}%
-Athey, Susan, and Stefan Wager. 2017. ``Policy Learning with
-Observational Data,'' February. \url{http://arxiv.org/abs/1702.02896}.
+\leavevmode\vadjust pre{\hypertarget{ref-Athey2017}{}}%
+Athey, Susan, and Stefan Wager. 2017. {``Policy Learning with
+Observational Data,''} February. \url{https://arxiv.org/abs/1702.02896}.
 
-\leavevmode\hypertarget{ref-Bachelier1900}{}%
-Bachelier, Louis. 1900. ``Theory of Speculation in the Random Character
-of Stock Market Prices.'' \emph{MIT Press, Cambridge, Mass. Blattberg}
+\leavevmode\vadjust pre{\hypertarget{ref-Bachelier1900}{}}%
+Bachelier, Louis. 1900. {``Theory of Speculation in the Random Character
+of Stock Market Prices.''} \emph{MIT Press, Cambridge, Mass. Blattberg}
 1018: 17--78.
 
-\leavevmode\hypertarget{ref-Barredo_Arrieta2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Barredo_Arrieta2020}{}}%
 Barredo Arrieta, Alejandro, Natalia Diaz-Rodriguez, Javier Del Ser,
 Adrien Bennetot, Siham Tabik, Alberto Barbado, Salvador Garcia, et al.
-2020. ``Explainable Artificial Intelligence (XAI): Concepts, Taxonomies,
-Opportunities and Challenges Toward Responsible AI.'' \emph{Inf. Fusion}
-58 (June): 82--115.
+2020. {``Explainable Artificial Intelligence ({XAI)}: Concepts,
+Taxonomies, Opportunities and Challenges Toward Responsible {AI}.''}
+\emph{Inf. Fusion} 58 (June): 82--115.
 
-\leavevmode\hypertarget{ref-Baumer2014}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Baumer2014}{}}%
 Baumer, B, Mine Çetinkaya-Rundel, Andrew Bray, Linda Loi, and N Horton.
-2014. ``R Markdown: Integrating a Reproducible Analysis Tool into
-Introductory Statistics.'' \emph{Undefined}.
+2014. {``{R} Markdown: Integrating a Reproducible Analysis Tool into
+Introductory Statistics.''} \emph{Undefined}.
 
-\leavevmode\hypertarget{ref-Black1973}{}%
-Black, Fischer, and Myron Scholes. 1973. ``The Pricing of Options and
-Corporate Liabilities.'' \emph{J. Polit. Econ.} 81 (3): 637--54.
+\leavevmode\vadjust pre{\hypertarget{ref-Black1973}{}}%
+Black, Fischer, and Myron Scholes. 1973. {``The Pricing of Options and
+Corporate Liabilities.''} \emph{J. Polit. Econ.} 81 (3): 637--54.
 
-\leavevmode\hypertarget{ref-Blume2019}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Blume2019}{}}%
 Blume, Jeffrey D, Robert A Greevy, Valerie F Welty, Jeffrey R Smith, and
-William D Dupont. 2019. ``An Introduction to Second-Generation
-P-Values.'' \emph{Am. Stat.} 73 (sup1): 157--67.
+William D Dupont. 2019. {``An Introduction to Second-Generation
+p-Values.''} \emph{Am. Stat.} 73 (sup1): 157--67.
 
-\leavevmode\hypertarget{ref-Breiman2001}{}%
-Breiman, Leo. 2001. ``Statistical Modeling: The Two Cultures (with
-Comments and a Rejoinder by the Author).'' \emph{Statistical Science} 16
-(3): 199--231.
+\leavevmode\vadjust pre{\hypertarget{ref-Breiman2001}{}}%
+Breiman, Leo. 2001. {``Statistical Modeling: The Two Cultures (with
+Comments and a Rejoinder by the Author).''} \emph{Statistical Science}
+16 (3): 199--231.
 
-\leavevmode\hypertarget{ref-Cesa2017}{}%
-Cesa, Mauro. 2017. ``A Brief History of Quantitative Finance.''
+\leavevmode\vadjust pre{\hypertarget{ref-Cesa2017}{}}%
+Cesa, Mauro. 2017. {``A Brief History of Quantitative Finance.''}
 \emph{Probability, Uncertainty and Quantitative Risk} 2 (1): 1--16.
 
-\leavevmode\hypertarget{ref-Chamberlain2000}{}%
-Chamberlain, Gary. 2000. ``Econometrics and Decision Theory.'' \emph{J.
-Econom.} 95 (2): 255--83.
+\leavevmode\vadjust pre{\hypertarget{ref-Cetinkaya-Rundel2018}{}}%
+Çetinkaya-Rundel, Mine, and Colin Rundel. 2018. {``Infrastructure and
+Tools for Teaching Computing Throughout the Statistical Curriculum.''}
+\emph{Am. Stat.} 72 (1): 58--65.
 
-\leavevmode\hypertarget{ref-Chamberlain2020}{}%
----------. 2020. ``Robust Decision Theory and Econometrics.''
+\leavevmode\vadjust pre{\hypertarget{ref-Chamberlain2000}{}}%
+Chamberlain, Gary. 2000. {``Econometrics and Decision Theory.''}
+\emph{J. Econom.} 95 (2): 255--83.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Chamberlain2020}{}}%
+---------. 2020. {``Robust Decision Theory and Econometrics.''}
 \emph{Annu. Rev. Econom.} 12 (1): 239--71.
 
-\leavevmode\hypertarget{ref-Cunningham2021}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Cunningham2021}{}}%
 Cunningham, Scott. 2021. \emph{Causal Inference: The Mixtape}. Yale
 University Press.
 
-\leavevmode\hypertarget{ref-Cetinkaya-Rundel2018}{}%
-Çetinkaya-Rundel, Mine, and Colin Rundel. 2018. ``Infrastructure and
-Tools for Teaching Computing Throughout the Statistical Curriculum.''
-\emph{Am. Stat.} 72 (1): 58--65.
+\leavevmode\vadjust pre{\hypertarget{ref-Dixon2020}{}}%
+Dixon, Matthew F, and Nicholas G Polson. 2020. {``Deep Fundamental
+Factor Models,''} March. \url{https://arxiv.org/abs/1903.07677}.
 
-\leavevmode\hypertarget{ref-Dixon2020}{}%
-Dixon, Matthew F, and Nicholas G Polson. 2020. ``Deep Fundamental Factor
-Models,'' March. \url{http://arxiv.org/abs/1903.07677}.
-
-\leavevmode\hypertarget{ref-Dreze1972}{}%
-Dreze, Jacques H. 1972. ``Econometrics and Decision Theory.''
+\leavevmode\vadjust pre{\hypertarget{ref-Dreze1972}{}}%
+Dreze, Jacques H. 1972. {``Econometrics and Decision Theory.''}
 \emph{Econometrica}.
 
-\leavevmode\hypertarget{ref-Easley2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Easley2020}{}}%
 Easley, David, Marcos López de Prado, Maureen O'Hara, and Zhibai Zhang.
-2020. ``Microstructure in the Machine Age.'' \emph{Rev. Financ. Stud.},
-July.
+2020. {``Microstructure in the Machine Age.''} \emph{Rev. Financ.
+Stud.}, July.
 
-\leavevmode\hypertarget{ref-Efron2016}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Efron2016}{}}%
 Efron, Bradley, and Trevor Hastie. 2016. \emph{Computer Age Statistical
 Inference}. Cambridge University Press.
 
-\leavevmode\hypertarget{ref-Fisher1936}{}%
-Fisher, R A. 1936. ``Design of Experiments.'' \emph{Br. Med. J.} 1
+\leavevmode\vadjust pre{\hypertarget{ref-Fisher1936}{}}%
+Fisher, R A. 1936. {``Design of Experiments.''} \emph{Br. Med. J.} 1
 (3923): 554--54.
 
-\leavevmode\hypertarget{ref-Gelman2020}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Gelman2020}{}}%
 Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2020. \emph{Regression
 and Other Stories}. Cambridge University Press.
 
-\leavevmode\hypertarget{ref-Haavelmo1943}{}%
-Haavelmo, Trygve. 1943. ``The Statistical Implications of a System of
-Simultaneous Equations.'' \emph{Econometrica} 11 (1): 1--12.
+\leavevmode\vadjust pre{\hypertarget{ref-Haavelmo1943}{}}%
+Haavelmo, Trygve. 1943. {``The Statistical Implications of a System of
+Simultaneous Equations.''} \emph{Econometrica} 11 (1): 1--12.
 
-\leavevmode\hypertarget{ref-Hang.2019}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Hang.2019}{}}%
 Hang, Bai, Kewei Hou, Howard Kung, Erica X N Li, and Lu Zhang. 2019.
-``The CAPM strikes back? An equilibrium model with disasters.'' \emph{J.
-Financ. Econ.} 131 (2): 269--98.
+{``{The CAPM strikes back? An equilibrium model with disasters}.''}
+\emph{J. Financ. Econ.} 131 (2): 269--98.
 \url{https://doi.org/10.1016/j.jfineco.2018.08.009}.
 
-\leavevmode\hypertarget{ref-Hastie2009}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Hastie2009}{}}%
 Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. 2009. \emph{The
 Elements of Statistical Learning: Data Mining, Inference, and
 Prediction, Second Edition}. Springer Science \& Business Media.
 
-\leavevmode\hypertarget{ref-banker2017}{}%
-International Banker. 2017. ``The Benefits of Leveraging Containers in
-the Financial Services Industry.''
+\leavevmode\vadjust pre{\hypertarget{ref-banker2017}{}}%
+International Banker. 2017. {``The Benefits of Leveraging Containers in
+the Financial Services Industry.''}
 \url{https://internationalbanker.com/technology/benefits-leveraging-containers-financial-services-industry/}.
 
-\leavevmode\hypertarget{ref-IBC2020}{}%
-Investment Banking Council. 2020. ``AI in Investment Banking - the New
-Frontier.''
+\leavevmode\vadjust pre{\hypertarget{ref-IBC2020}{}}%
+Investment Banking Council. 2020. {``{AI} in Investment Banking - the
+New Frontier.''}
 \url{https://www.investmentbankingcouncil.org/blog/ai-in-investment-banking-the-new-frontier}.
 
-\leavevmode\hypertarget{ref-Jaeger2021}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Jaeger2021}{}}%
 Jaeger, Markus, Stephan Krügel, Dimitri Marinelli, Jochen Papenbrock,
-and Peter Schwendner. 2021. ``Interpretable Machine Learning for
-Diversified Portfolio Construction.'' \emph{The Journal of Financial
+and Peter Schwendner. 2021. {``Interpretable Machine Learning for
+Diversified Portfolio Construction.''} \emph{The Journal of Financial
 Data Science}, June, jfds.2021.1.066.
 
-\leavevmode\hypertarget{ref-Kaplan2007}{}%
-Kaplan, Daniel. 2007. ``Computing and Introductory Statistics.''
+\leavevmode\vadjust pre{\hypertarget{ref-Kaplan2007}{}}%
+Kaplan, Daniel. 2007. {``Computing and Introductory Statistics.''}
 \emph{Technology Innovations in Statistics Education} 1 (1).
 
-\leavevmode\hypertarget{ref-Knuth1984}{}%
-Knuth, D E. 1984. ``Literate Programming.'' \emph{Comput. J.} 27 (2):
+\leavevmode\vadjust pre{\hypertarget{ref-Knuth1984}{}}%
+Knuth, D E. 1984. {``Literate Programming.''} \emph{Comput. J.} 27 (2):
 97--111.
 
-\leavevmode\hypertarget{ref-L.2016uks}{}%
-L, Ronald, Wasserstein, and Nicole A Lazar. 2016. ``The ASA's Statement
-on p-Values: Context, Process, and Purpose.'' \emph{Am. Stat.} 70 (2):
-129--33. \url{https://doi.org/10.1080/00031305.2016.1154108}.
+\leavevmode\vadjust pre{\hypertarget{ref-L.2016uks}{}}%
+L, Ronald, Wasserstein, and Nicole A Lazar. 2016. {``{The ASA's
+Statement on p-Values: Context, Process, and Purpose}.''} \emph{Am.
+Stat.} 70 (2): 129--33.
+\url{https://doi.org/10.1080/00031305.2016.1154108}.
 
-\leavevmode\hypertarget{ref-Lin2017}{}%
-Lin, Sin-Jin, and Ming-Fu Hsu. 2017. ``Incorporated Risk Metrics and
-Hybrid AI Techniques for Risk Management.'' \emph{Neural Comput. Appl.}
-28 (11): 3477--89.
+\leavevmode\vadjust pre{\hypertarget{ref-Lin2017}{}}%
+Lin, Sin-Jin, and Ming-Fu Hsu. 2017. {``Incorporated Risk Metrics and
+Hybrid {AI} Techniques for Risk Management.''} \emph{Neural Comput.
+Appl.} 28 (11): 3477--89.
 
-\leavevmode\hypertarget{ref-Lommers2021}{}%
-Lommers, Kristof, Ouns El Harzli, and Jack Kim. 2021. ``Confronting
-Machine Learning with Financial Research.'' \emph{The Journal of
+\leavevmode\vadjust pre{\hypertarget{ref-Lommers2021}{}}%
+Lommers, Kristof, Ouns El Harzli, and Jack Kim. 2021. {``Confronting
+Machine Learning with Financial Research.''} \emph{The Journal of
 Financial Data Science}, June, jfds.2021.1.068.
 
-\leavevmode\hypertarget{ref-De_Prado2019}{}%
-López de Prado, Marcos. 2019. ``A Data Science Solution to the
-Multiple-Testing Crisis in Financial Research.'' \emph{The Journal of
-Financial Data Science} 1 (1): 99--110.
+\leavevmode\vadjust pre{\hypertarget{ref-Lopez_de_Prado2018}{}}%
+López de Prado, Marcos. 2018. \emph{Advances in Financial Machine
+Learning}. John Wiley \& Sons.
 
-\leavevmode\hypertarget{ref-Lopez_de_Prado2018}{}%
----------. 2018. \emph{Advances in Financial Machine Learning}. John
-Wiley \& Sons.
+\leavevmode\vadjust pre{\hypertarget{ref-De_Prado2019}{}}%
+---------. 2019. {``A Data Science Solution to the {Multiple-Testing}
+Crisis in Financial Research.''} \emph{The Journal of Financial Data
+Science} 1 (1): 99--110.
 
-\leavevmode\hypertarget{ref-Mahdavi2020}{}%
-Mahdavi, Mehrzad, and Hossein Kazemi. 2020. ``It's All About Data: How
-to Make Good Decisions in a World Awash with Information.'' \emph{The
+\leavevmode\vadjust pre{\hypertarget{ref-Mahdavi2020}{}}%
+Mahdavi, Mehrzad, and Hossein Kazemi. 2020. {``It's All about Data: How
+to Make Good Decisions in a World Awash with Information.''} \emph{The
 Journal of Financial Data Science} 2 (2): 8--16.
 
-\leavevmode\hypertarget{ref-Mavridis2019}{}%
-Mavridis, Ilias, and Helen Karatza. 2019. ``Combining Containers and
+\leavevmode\vadjust pre{\hypertarget{ref-Mavridis2019}{}}%
+Mavridis, Ilias, and Helen Karatza. 2019. {``Combining Containers and
 Virtual Machines to Enhance Isolation and Extend Functionality on Cloud
-Computing.'' \emph{Future Gener. Comput. Syst.} 94 (May): 674--96.
+Computing.''} \emph{Future Gener. Comput. Syst.} 94 (May): 674--96.
 
-\leavevmode\hypertarget{ref-Merton1973}{}%
-Merton, Robert C. 1973. ``Theory of Rational Option Pricing.'' \emph{The
-Bell Journal of Economics and Management Science} 4 (1): 141--83.
+\leavevmode\vadjust pre{\hypertarget{ref-Merton1973}{}}%
+Merton, Robert C. 1973. {``Theory of Rational Option Pricing.''}
+\emph{The Bell Journal of Economics and Management Science} 4 (1):
+141--83.
 
-\leavevmode\hypertarget{ref-Molina2019}{}%
-Molina, Mario, and Filiz Garip. 2019. ``Machine Learning for
-Sociology.'' \emph{Annu. Rev. Sociol.} 45 (1): 27--45.
+\leavevmode\vadjust pre{\hypertarget{ref-Molina2019}{}}%
+Molina, Mario, and Filiz Garip. 2019. {``Machine Learning for
+Sociology.''} \emph{Annu. Rev. Sociol.} 45 (1): 27--45.
 
-\leavevmode\hypertarget{ref-Pearl2009}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Pearl2009}{}}%
 Pearl, Judea. 2009. \emph{Causality}. Cambridge University Press.
 
-\leavevmode\hypertarget{ref-Campbell.2017}{}%
-R, Campbell, Harvey. 2017. ``Presidential Address: The Scientific
-Outlook in Financial Economics.'' \emph{SSRN Electronic Journal}, July.
-\url{https://doi.org/10.2139/ssrn.2893930}.
+\leavevmode\vadjust pre{\hypertarget{ref-Campbell.2017}{}}%
+R, Campbell, Harvey. 2017. {``{Presidential Address: The Scientific
+Outlook in Financial Economics}.''} \emph{SSRN Electronic Journal},
+July. \url{https://doi.org/10.2139/ssrn.2893930}.
 
-\leavevmode\hypertarget{ref-Reisinger2018}{}%
-Reisinger, Christoph, and Rasmus Wissmann. 2018. ``Finite Difference
-Methods for Medium-and High-Dimensional Derivative Pricing PDEs.'' In
-\emph{High-Performance Computing in Finance}, 175--95. Chapman;
+\leavevmode\vadjust pre{\hypertarget{ref-Reisinger2018}{}}%
+Reisinger, Christoph, and Rasmus Wissmann. 2018. {``Finite Difference
+Methods for Medium-and High-Dimensional Derivative Pricing {PDEs}.''} In
+\emph{{High-Performance} Computing in Finance}, 175--95. Chapman;
 Hall/CRC.
 
-\leavevmode\hypertarget{ref-RStudioT2021}{}%
-``RStudio Team.'' 2021. \url{https://www.rstudio.com/products/team/}.
+\leavevmode\vadjust pre{\hypertarget{ref-RStudioT2021}{}}%
+{``{RStudio} Team.''} 2021.
+\url{https://www.rstudio.com/products/team/}.
 
-\leavevmode\hypertarget{ref-RStudioW2021}{}%
-``RStudio Workbench.'' 2021.
+\leavevmode\vadjust pre{\hypertarget{ref-RStudioW2021}{}}%
+{``{RStudio} Workbench.''} 2021.
 \url{https://www.rstudio.com/products/workbench/}.
 
-\leavevmode\hypertarget{ref-Rubin1974}{}%
-Rubin, Donald B. 1974. ``Estimating Causal Effects of Treatments in
-Randomized and Nonrandomized Studies.'' \emph{J. Educ. Psychol.} 66 (5):
-688--701.
+\leavevmode\vadjust pre{\hypertarget{ref-Rubin1974}{}}%
+Rubin, Donald B. 1974. {``Estimating Causal Effects of Treatments in
+Randomized and Nonrandomized Studies.''} \emph{J. Educ. Psychol.} 66
+(5): 688--701.
 
-\leavevmode\hypertarget{ref-SOA2020}{}%
-Society of Actuaries. 2020. ``The Powerful Combination of Actuarial
-Expertise and InsurTech Knowledge.'' Society of Actuaries;
+\leavevmode\vadjust pre{\hypertarget{ref-SOA2020}{}}%
+Society of Actuaries. 2020. {``The Powerful Combination of Actuarial
+Expertise and {InsurTech} Knowledge.''} Society of Actuaries;
 \url{https://www.soa.org/programs/insurtech/}.
 
-\leavevmode\hypertarget{ref-Spiegelhalter2019}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-Spiegelhalter2019}{}}%
 Spiegelhalter, David. 2019. \emph{The Art of Statistics: Learning from
 Data}. Penguin UK.
 
-\leavevmode\hypertarget{ref-Wager2017}{}%
-Wager, Stefan, and Susan Athey. 2017. ``Estimation and Inference of
-Heterogeneous Treatment Effects Using Random Forests.'' \emph{J. Am.
+\leavevmode\vadjust pre{\hypertarget{ref-Wager2017}{}}%
+Wager, Stefan, and Susan Athey. 2017. {``Estimation and Inference of
+Heterogeneous Treatment Effects Using Random Forests.''} \emph{J. Am.
 Stat. Assoc.}, April, 1--15.
 
-\leavevmode\hypertarget{ref-Wolpert1997}{}%
-Wolpert, D H, and W G Macready. 1997. ``No Free Lunch Theorems for
-Optimization.'' \emph{IEEE Trans. Evol. Comput.} 1 (1): 67--82.
+\leavevmode\vadjust pre{\hypertarget{ref-Wolpert1997}{}}%
+Wolpert, D H, and W G Macready. 1997. {``No Free Lunch Theorems for
+Optimization.''} \emph{IEEE Trans. Evol. Comput.} 1 (1): 67--82.
 
-\leavevmode\hypertarget{ref-Wright1934}{}%
-Wright, Sewall. 1934. ``The Method of Path Coefficients.'' \emph{Aoms} 5
-(3): 161--215.
+\leavevmode\vadjust pre{\hypertarget{ref-Wright1934}{}}%
+Wright, Sewall. 1934. {``The Method of Path Coefficients.''} \emph{Aoms}
+5 (3): 161--215.
 
-\leavevmode\hypertarget{ref-Zuo2021}{}%
-Zuo, Yi, Thomas G Stewart, and Jeffrey D Blume. 2021. ``Variable
-Selection with Second-Generation P-Values.'' \emph{Am. Stat.}, June,
+\leavevmode\vadjust pre{\hypertarget{ref-Zuo2021}{}}%
+Zuo, Yi, Thomas G Stewart, and Jeffrey D Blume. 2021. {``Variable
+Selection with Second-Generation p-Values.''} \emph{Am. Stat.}, June,
 1--21.
+
+\end{CSLReferences}
 
 \bibliographystyle{unsrt}
 \bibliography{biblio.bib}
