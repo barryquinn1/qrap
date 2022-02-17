@@ -1,3 +1,4 @@
+flextable
 tidyverse
 ggplot2
 tibble
@@ -9,4 +10,3 @@ stringr
 forcats
 ggrepel
 ggdark
-flextable

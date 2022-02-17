@@ -8,7 +8,7 @@ authors:
     location: Belfast
     email: b.quinn@qub.ac.uk
 abstract: |
-  We consider the challenge of teaching open science analytics in finance in the computer age.  There is a crisis of confidence in science; especially finance. We argue that the unstoppable algorithmic tranformation of financial services, and the nascent field of financial machine learning provide an opportunity to redesign finance programmes for the age of financial technology. We argue it is time for a rethink how we can extract reliable statistical inference from financial data given proliferation of computing, *Big financial data*, and the unstoppable algorithmisation of the finance industry. The paper begins by agnostically profiling the modelling paradigm choice. Next we establish the developments in statistical inference in the computer age specific to finance. Finally, we consider the idea of placing computation as a central tennent in finance curicullum, and discuss the infrastructure and tools involved.  We illustrate a use case where the infrastrcture is on-boarded in a cloud computing suite with enterprise-level server software. We are not arguing that finance is computation, rather that by placing computation as a frictionless part of the curicullum, students can engage with the full suite of state-of-the-art inferential tools avaliable to financial data science practicioners.    
+  We consider the challenge of teaching open science analytics in finance in the computer age. There is a crisis of confidence in science; especially finance. We argue that the unstoppable algorithmic transformation of financial services and the nascent field of financial machine learning provide an opportunity to redesign finance programmes for the age of financial technology. We argue it is time for a rethink of how we can extract reliable statistical inference from financial data given the proliferation of computing, "Big Data", and the unstoppable "algorithmisation" of the finance industry. The paper begins by agnostically profiling the modelling paradigm choice. Next, we establish the developments in statistical inference in the computer age. Finally, we consider the idea of placing computation as a central tenant in the finance curriculum and discuss the infrastructure and tools involved. We illustrate a use case where the infrastructure is on-boarded in a cloud computing suite with enterprise-level server software. We are not arguing that finance is computation, rather by placing computation as a frictionless part of the curriculum, students can engage with the full suite of state-of-the-art inferential tools available to financial data science practitioners.     
 keywords:
   - Open source analytics
   - Finance education
@@ -512,7 +512,7 @@ On the *sell-side* a game-changing breakthrough in the 1970s was a model to pric
 Much like teaching statistics and data science, embedding computing in a financial statistics course has three interconnected teaching advantages:
 
 1. Produce interesting output with data (and code) within the first ten minutes of the first class;
-A have a knock-on effect of challenge students to infer meaning from data and statistics from day one;
+A have a knock-on effect of challenging students to infer meaning from data and statistics from day one;
 2. Get students to think about computation as an integral part of the finance curriculum[@Kaplan2007; @Cetinkaya-Rundel2018])
 3. Demystify the [folk theorem of statistical computing](https://statmodeling.stat.columbia.edu/2008/05/13/the_folk_theore/) where students think that changing the computing environment improves their output;
 
@@ -624,20 +624,10 @@ Before GitHub classrooms, GitHub management tools such as organisation and teams
 
 Much of what has been described above has now been automated in GitHub Classroom and can also be integrated into learning management systems such as [Canvas](https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/connect-a-learning-management-system-to-github-classroom).  The learning curve for these tools is unavoidable. It can be high for introductory-level courses, but a basic understanding of the workflow in Figure 5 is sufficient for most modules.
 
+
+
 ```{r github-workflow, fig.cap="Seven git commands students need to learn"}
-DiagrammeR::mermaid("
-sequenceDiagram
-  Working Directory->> Staging Area: git add
-  Note left of Staging Area: `git add .` adds all changes
-  Staging Area-->> Working Directory: git rm
-  Note left of Staging Area: `git rm .` unstages all changes
-  Staging Area->>Local Repository: git commit
-  Local Repository->>Remote Repository: git push
-  Note left of Remote Repository: pushed to GitHub
-  Remote Repository->>Local Repository: git pull
-  Local Repository->>Working Directory: git checkout
-  Remote Repository->>Working Directory: git clone
-")
+knitr::include_graphics("git.png",dpi = 200)
 
 ```
 

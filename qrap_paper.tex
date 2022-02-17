@@ -28,12 +28,18 @@ comments.}
   }
 
 
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 
 % Pandoc citation processing
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
 % for Pandoc 2.8 to 2.10.1
 \newenvironment{cslreferences}%
   {}%
@@ -43,49 +49,45 @@ comments.}
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
   \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
  }%
  {}
-\usepackage{calc} % for calculating minipage widths
+\usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{booktabs} \usepackage{longtable} \usepackage{array} \usepackage{multirow} \usepackage[table]{xcolor} \usepackage{wrapfig} \usepackage{float} \floatplacement{figure}{H}
-
-
 \begin{document}
 \maketitle
-
-\def\tightlist{}
 
 
 \begin{abstract}
 We consider the challenge of teaching open science analytics in finance
 in the computer age. There is a crisis of confidence in science;
 especially finance. We argue that the unstoppable algorithmic
-tranformation of financial services, and the nascent field of financial
+transformation of financial services and the nascent field of financial
 machine learning provide an opportunity to redesign finance programmes
 for the age of financial technology. We argue it is time for a rethink
-how we can extract reliable statistical inference from financial data
-given proliferation of computing, \emph{Big financial data}, and the
-unstoppable algorithmisation of the finance industry. The paper begins
-by agnostically profiling the modelling paradigm choice. Next we
-establish the developments in statistical inference in the computer age
-specific to finance. Finally, we consider the idea of placing
-computation as a central tennent in finance curicullum, and discuss the
-infrastructure and tools involved. We illustrate a use case where the
-infrastrcture is on-boarded in a cloud computing suite with
-enterprise-level server software. We are not arguing that finance is
-computation, rather that by placing computation as a frictionless part
-of the curicullum, students can engage with the full suite of
-state-of-the-art inferential tools avaliable to financial data science
-practicioners.
+of how we can extract reliable statistical inference from financial data
+given the proliferation of computing, ``Big Data,'' and the unstoppable
+``algorithmisation'' of the finance industry. The paper begins by
+agnostically profiling the modelling paradigm choice. Next, we establish
+the developments in statistical inference in the computer age. Finally,
+we consider the idea of placing computation as a central tenant in the
+finance curriculum and discuss the infrastructure and tools involved. We
+illustrate a use case where the infrastructure is on-boarded in a cloud
+computing suite with enterprise-level server software. We are not
+arguing that finance is computation, rather by placing computation as a
+frictionless part of the curriculum, students can engage with the full
+suite of state-of-the-art inferential tools available to financial data
+science practitioners.
 \end{abstract}
 
 \keywords{
@@ -135,8 +137,8 @@ al., 2017), and financial economics (Kelly et al.~2022). In business
 schools, this crisis has two distinct but interconnected parts. A crisis
 of confidence in knowledge published in journal and by extension a
 crisis of relevance in the classroom, where the mission is to provide
-education guided by research(\textbf{RRBM.2020?}). In this paper, we
-seek to understand the challenge of teaching responsible analytics in
+education guided by research (Abdel-Khalik et al. 2020). In this paper,
+we seek to understand the challenge of teaching responsible analytics in
 the fast movement age of financial technology.
 
 The algorithmic transformation of financial services has seen the
@@ -665,33 +667,8 @@ inference are probability densities:
 where x, the observed data, is a point in the sample space X, while
 unobserved parameter \(\mu\) is a point in the parameter space
 \(\Omega\). A statistician observes x from \(f_u(x)\), and infer the
-value of \(\mu\) \^{}{[}Popular families of distributions include
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  the Normal family:
-\end{enumerate}
-
-\[f_u(x)=\frac{1}{\sqrt{2 \pi}} e^{-0.5(x-\mu)^2}\]
-
-useful when we want \(X\) and \(\Omega\) being on the entire real line
-\((-\infty,\infty)\)
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{1}
-\tightlist
-\item
-  Poisson family:
-\end{enumerate}
-
-\[f_u(x)=e^{-\mu)}\mu^-x/x!\]
-
-useful when \(X\) is a nonnegative integer \(\left\{0,1,2,...\right\}\)
-and \(\Omega\) is the nonnegative real number line \((0,\infty)\) {]}.
-In addition Bayesian inference requires one crucial assumption, the
+value of \(\mu\).\footnote{Popular families of distributions include} In
+addition Bayesian inference requires one crucial assumption, the
 knowledge of a prior density concerning the parameter
 \(g(\mu),\mu \in \Omega\). \(g(\mu)\) represents prior information
 concerning the parameter \(\mu\), available to the statistician
@@ -705,13 +682,10 @@ The rule is a simple exercise in conditional probability. Formally,
 integral or a sum of discrete where we count up all the possibilities).
 In this rule \(x\) is fixed at its observed value while \(\mu\) varies
 over \(\Omega\). \textbf{This is the opposite of frequentist
-calculations}. \^{}{[}A memorable restatement of this rule is that the
-posterior odds ratio is the prior odds ratio time the likelihood ratio.
-Formally, this is defined for any two points \(\mu_1\) and \(\mu_2\) on
-\(\Omega\) as:
-
-\[\frac{g(\mu_1|x)}{g(\mu_2|x)}=\frac{g(\mu_1)}{g(\mu_1)}\frac{f_{\mu_1}(x)}{f_{\mu_2}(x)}\]
-(Efron and Hastie 2016){]}
+calculations}.\footnote{A memorable restatement of this rule is that the
+  posterior odds ratio is the prior odds ratio time the likelihood
+  ratio. Formally, this is defined for any two points \(\mu_1\) and
+  \(\mu_2\) on \(\Omega\) as:}
 
 \hypertarget{comparing-modelling-paradigms}{%
 \subsubsection{Comparing modelling
@@ -1042,7 +1016,7 @@ advantages:
 \tightlist
 \item
   Produce interesting output with data (and code) within the first ten
-  minutes of the first class; A have a knock-on effect of challenge
+  minutes of the first class; A have a knock-on effect of challenging
   students to infer meaning from data and statistics from day one;
 \item
   Get students to think about computation as an integral part of the
@@ -1453,7 +1427,7 @@ Figure 5 is sufficient for most modules.
 
 \begin{figure}
 
-{\centering \includegraphics{qrap_paper_files/figure-latex/github-workflow-1} 
+{\centering \includegraphics[width=4.96in]{git} 
 
 }
 
@@ -1512,6 +1486,14 @@ technologies are rapidly evolving.
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-RRBM.2020}{}}%
+Abdel-Khalik, Rashad, Franklin Allen, Mats Alvesson, Mary Jo Bitner,
+Ingmar Bjorkman, Hongbin Cai, Gerald F. Davis, et al. 2020. {``{A Vision
+of Responsible Research in Business and Management: Striving for Useful
+and Credible Knowledge}.''} \emph{Community of Responsible Research in
+Business and Managment}.
+\url{https://rrbm.network/wp-content/uploads/2020/04/Position-Paper/_revised/_8April2020.pdf}.
+
 \leavevmode\vadjust pre{\hypertarget{ref-Apley2020}{}}%
 Apley, Daniel W, and Jingyu Zhu. 2020. {``Visualizing the Effects of
 Predictor Variables in Black Box Supervised Learning Models.''} \emph{J.

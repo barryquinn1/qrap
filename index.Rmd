@@ -197,7 +197,7 @@ On the *sell-side* a game-changing breakthrough in the 1970s was a model to pric
 Much like teaching statistics and data science, embedding computing in a financial analytics course has three interconnected teaching advantages:
 
 1. Produce interesting output with data (and code) within the first ten minutes of the first class;
-A have a knock-on effect of challenge students to infer meaning from data and statistics from day one;
+This has a knock-on effect of challenging students to infer meaning from data and statistics from day one;
 2. Get students to think about computation as an integral part of the finance curriculum[@Kaplan2007; @Cetinkaya-Rundel2018])
 3. Demystify the [folk theorem of statistical computing](https://statmodeling.stat.columbia.edu/2008/05/13/the_folk_theore/) where students think that changing the computing environment improves their output;
 
