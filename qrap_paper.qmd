@@ -1,5 +1,5 @@
 ---
-title: "Teaching open science analytics in the age of financial technology"
+title: "Teaching data science in the age of financial technology"
 authors:
   - name: Barry Quinn
     thanks: A special thanks to Dr Alan Hanna for his insightful comments.
@@ -10,12 +10,8 @@ authors:
 abstract: |
   We consider the challenge of teaching open science analytics in finance in the computer age. There is a crisis of confidence in science; especially finance. We argue that the unstoppable algorithmic transformation of financial services and the nascent field of financial machine learning provide an opportunity to redesign finance programmes for the age of financial technology. We argue it is time for a rethink of how we can extract reliable statistical inference from financial data given the proliferation of computing, "Big Data", and the unstoppable "algorithmisation" of the finance industry. The paper begins by agnostically profiling the modelling paradigm choice. Next, we establish the developments in statistical inference in the computer age. Finally, we consider the idea of placing computation as a central tenant in the finance curriculum and discuss the infrastructure and tools involved. We illustrate a use case where the infrastructure is on-boarded in a cloud computing suite with enterprise-level server software. We are not arguing that finance is computation, rather by placing computation as a frictionless part of the curriculum, students can engage with the full suite of state-of-the-art inferential tools available to financial data science practitioners.     
 keywords:
-  - Open source analytics
   - Finance education
-  - Financial technology
-  - Statistical inference
   - Financial data science
-  - Financial machine learning
   - Econometrics
   - Cloud computing
   - Employability 
@@ -49,7 +45,7 @@ The algorithmic transformation of financial services has seen the financial tech
 
 While finance is a social science, many parts of modern finance are fundamentally quantitative, with financial practitioners solving practical problems using innovative technologies.  Furthermore, the rise of big and alternative data combined with the exponential growth of AI and financial data science has created new opportunities in the financial sector. AI and machine learning applications are now widespread and include innovations in risk management [@Lin2017], portfolio construction [@Jaeger2021], investment banking [@IBC2020] and insurance [@SOA2020]. In short, the *algorithmisation* of finance is unstoppable [@De_Prado2019].
 
-Statistical inference is a broad discipline at the intersection of mathematics, empirical science and philosophy. Since its philosophical beginnings through the publication of the Bayes rule in 1763^[Which was used by early advocates to argue the existence of God.], computation has been a traditional bottleneck for applied statistical inference frameworks, motivating small sample solutions with solid asymptotic principles [@Efron2016].  Traditional econometrics retained much of this framework arguable because of the sparsity of observed data realisation of theory. Up until the early 1950s, the computation bottle still dominated small sample solutions in applied statistics.  But as power and accessibility of computing have increased, and statistical theory has developed, statistical inference using machine learning model has become commonplace for applied statisticians^[One notable example is the *bootstrap* a computer-intensive inferential engine that is now ubiquitous in applied statistics.]
+Statistical inference is a broad discipline at the intersection of mathematics, empirical science and philosophy. Since its philosophical beginnings through the publication of the Bayes rule in 1763^[Which was used by early advocates to argue the existence of God.], computation has been a traditional bottleneck for applied statistical inference frameworks, motivating small sample solutions with solid asymptotic principles [@Efron2016].  Traditional econometrics retained much of this framework arguable because of the sparsity of observed data realisation of theory. Up until the early 1950s, the computation bottle still dominated small sample solutions in applied statistics.  But as power and accessibility of computing have increased, and statistical theory has developed, statistical inference using machine learning models has become commonplace for applied statisticians^[One notable example is the *bootstrap* a computer-intensive inferential engine that is now ubiquitous in applied statistics.]
   
 While narrow AI, which uses rule-based algorithms, has dominated the fast-paced automation of tasks in financial services, researchers predict the next wave of automation will be the digitising judgement calls [@Lopez_de_Prado2018].  Given that finance professionals have an essential fiduciary duty towards their clients, the rapid growth of artificial intelligence (AI) in finance has highlighted some critical risks around trust, overfitting, lack of interpretability, biased inputs and unethical use of data.  Now more than ever, highly computationally digitally literate finance graduates are needed to balance algorithmic technology developments with sustainability, ethics, bias, and privacy to create *trustworthy* data-driven decisions [@Mahdavi2020].
 
